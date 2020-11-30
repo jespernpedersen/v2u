@@ -4,30 +4,26 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Main Component
-import { DashboardComponent } from './dashboard.component';
+import { HowFeelingsComponent } from './how.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-// Views
-import { HowFeelingsModule } from './feelings/how/how.module';
-
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    HowFeelingsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule,
-    HowFeelingsModule
+    MatToolbarModule
   ],
   providers: [],
   exports: [
-
+      
   ]
 })
-export class DashboardModule { }
+export class HowFeelingsModule { }
