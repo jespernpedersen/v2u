@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vent2u"
+    }
+  },
+  "defaultProject": "vent2u",
+  "cli": {
+    "analytics": "80d39b63-c003-47eb-820d-9d78d6ec1821"
+  }
 }
