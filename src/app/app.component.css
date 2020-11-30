@@ -1,0 +1,8 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Sets padding on the inside instead of extending the boxes */
+    box-sizing: border-box;
+}
