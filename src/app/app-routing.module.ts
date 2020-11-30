@@ -17,6 +17,7 @@ const routes: Routes = [
         path: '', component: DashboardComponent,
         children: [
           { path: '', component: HowFeelingsComponent, },
+          { path: 'how', component: HowFeelingsComponent, },
           { path: 'where', component: WhereFeelingsComponent },
         ] },
     ]
