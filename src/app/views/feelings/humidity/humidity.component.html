@@ -1,12 +1,11 @@
 <div class="room">
-    <h1>How does the room feel?</h1>
-    <ul class="questions">
-        <li routerLink="where">Hot/Cold</li>
-        <li routerLink="where">Too Smelly</li>
-        <li routerLink="where">Not enough <br>fresh air</li>
-        <li routerLink="where">Too sweaty</li>
-        <li routerLink="where">Freezing</li>
-        <li routerLink="where">Too windy</li>
-        <li routerLink="where">Humid/Dry</li>
+    <h1>Humidity</h1>
+    <h2>How do you feel?</h2>
+    <ul class="humidity">
+        <li class="hide"></li>
+        <li *ngFor="let temp of tempRange">
+            <p>{{ temp }}°C</p>
+        </li>
+        <li class="hide"></li>
     </ul>
 </div>
