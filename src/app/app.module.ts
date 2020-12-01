@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DashboardModule } from './views/dashboard.module';
+import { GoBackModule } from './shared/_components/GoBack/goback.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DashboardModule } from './views/dashboard.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DashboardModule
+    DashboardModule,
+    GoBackModule
   ],
   bootstrap: [AppComponent]
 })

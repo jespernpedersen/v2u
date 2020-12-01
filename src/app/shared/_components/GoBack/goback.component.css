@@ -1,0 +1,11 @@
+.back {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.back span {
+    border-bottom: 1px solid #FFF;
+}

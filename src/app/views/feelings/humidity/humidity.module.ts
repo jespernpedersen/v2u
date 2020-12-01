@@ -24,4 +24,4 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   providers: [],
   exports: []
 })
-export class RoomFeelingsModule { }
+export class HumidityModule { }
