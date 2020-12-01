@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
-import { HowFeelingsModule } from './feelings/how/how.module';
+import { RoomFeelingsModule } from './feelings/room/room.module';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { HowFeelingsModule } from './feelings/how/how.module';
     RouterModule,
     MatIconModule,
     MatToolbarModule,
-    HowFeelingsModule
+    RoomFeelingsModule
   ],
   providers: [],
   exports: [

@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 
 // Login Routes
 import { DashboardComponent } from './views/dashboard.component';
+import { HumidityComponent } from './views/feelings/humidity/humidity.component';
 
 // Child Route Dashboard
-import { HowFeelingsComponent } from './views/feelings/how/how.component';
-import { WhereFeelingsComponent } from './views/feelings/where/where.component';
+import { RoomFeelingsComponent } from './views/feelings/room/room.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -16,9 +16,9 @@ const routes: Routes = [
       { 
         path: '', component: DashboardComponent,
         children: [
-          { path: '', component: HowFeelingsComponent, },
-          { path: 'how', component: HowFeelingsComponent, },
-          { path: 'where', component: WhereFeelingsComponent },
+          { path: '', component: RoomFeelingsComponent, },
+          { path: 'room', component: RoomFeelingsComponent, },
+          { path: 'humidity', component: HumidityComponent, },
         ] },
     ]
   },
