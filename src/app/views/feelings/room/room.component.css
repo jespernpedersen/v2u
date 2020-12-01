@@ -31,3 +31,9 @@ h1 {
 .questions li:not(:last-of-type) {
     margin-bottom: 15px;
 }
+
+mat-icon {
+    display: inline-block;
+    width: 100%;
+    font-size: 44px;
+}
