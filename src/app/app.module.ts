@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DashboardModule } from './views/dashboard.module';
-import { GoBackModule } from './shared/_components/GoBack/goback.module';
-
 
 @NgModule({
   declarations: [
@@ -15,8 +13,7 @@ import { GoBackModule } from './shared/_components/GoBack/goback.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DashboardModule,
-    GoBackModule
+    DashboardModule
   ],
   bootstrap: [AppComponent]
 })
