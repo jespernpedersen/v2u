@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Main Component
-import { HowFeelingsComponent } from './how.component';
+import { RoomFeelingsComponent } from './room.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
@@ -13,7 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
-    HowFeelingsComponent
+    RoomFeelingsComponent
   ],
   imports: [
     CommonModule,
@@ -26,4 +26,4 @@ import { MatToolbarModule } from '@angular/material/toolbar';
       
   ]
 })
-export class HowFeelingsModule { }
+export class RoomFeelingsModule { }
