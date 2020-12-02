@@ -10,6 +10,7 @@ import { DashboardComponent } from './views/dashboard.component';
 import { RoomFeelingsComponent } from './views/feelings/room/room.component';
 import { HumidityComponent } from './views/feelings/humidity/humidity.component';
 import { TemperatureComponent } from './views/feelings/temperature/temperature.component';
+import { ConfirmationComponent } from './views/request/confirmation/confirmation.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -21,6 +22,7 @@ const routes: Routes = [
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
           { path: 'temperature', component: TemperatureComponent, },
+          { path: 'confirmation', component: ConfirmationComponent, },
         ] },
     ]
   },
