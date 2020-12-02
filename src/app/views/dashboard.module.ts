@@ -8,12 +8,12 @@ import { DashboardComponent } from './dashboard.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
 import { TemperatureModule } from './feelings/temperature/temperature.module';
 import { HumidityModule } from './feelings/humidity/humidity.module';
+import { ConfirmationModule } from './request/confirmation/confirmation.module';
 import { StatusModule } from './request/status/status.module';
 
 @NgModule({
@@ -24,10 +24,10 @@ import { StatusModule } from './request/status/status.module';
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule,
     RoomFeelingsModule,
     TemperatureModule,
     HumidityModule,
+    ConfirmationModule,
     StatusModule
   ],
   providers: [],

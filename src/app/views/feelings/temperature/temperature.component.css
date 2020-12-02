@@ -40,7 +40,7 @@ ul.temperature::-moz-scrollbar {
     display: block;
     scroll-snap-align: center;
     padding: 5px 0;
-    color: #b5e6c1;
+    color: #fff;
     position: relative;
     margin: 5px 0;
 }
