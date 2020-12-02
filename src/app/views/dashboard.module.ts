@@ -12,7 +12,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
-
+import { TemperatureModule } from './feelings/temperature/temperature.module';
+import { HumidityModule } from './feelings/humidity/humidity.module';
+import { StatusModule } from './request/status/status.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { RoomFeelingsModule } from './feelings/room/room.module';
     RouterModule,
     MatIconModule,
     MatToolbarModule,
-    RoomFeelingsModule
+    RoomFeelingsModule,
+    TemperatureModule,
+    HumidityModule,
+    StatusModule
   ],
   providers: [],
   exports: [

@@ -1,11 +1,5 @@
-<div class="room">
-    <h1>Humidity</h1>
-    <h2>How do you feel?</h2>
-    <ul class="humidity">
-        <li class="hide"></li>
-        <li *ngFor="let temp of tempRange">
-            <p>{{ temp }}°C</p>
-        </li>
-        <li class="hide"></li>
-    </ul>
-</div>
+<h1>Humidity</h1>
+<h2>How do you feel?</h2>
+<ul class="humidity">
+    <li routerLink="/temperature">3. Temperature</li>
+</ul>
