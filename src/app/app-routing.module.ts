@@ -14,7 +14,7 @@ import { LoginComponent } from './views/login/login.component';
 const routes: Routes = [
   { path: '', component: AppComponent,
     children: [
-      { 
+      {
         path: '', component: DashboardComponent,
         children: [
           { path: '', component: RoomFeelingsComponent, },
