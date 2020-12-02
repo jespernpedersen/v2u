@@ -9,6 +9,7 @@ import { HumidityComponent } from './views/feelings/humidity/humidity.component'
 
 // Child Route Dashboard
 import { RoomFeelingsComponent } from './views/feelings/room/room.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -19,6 +20,8 @@ const routes: Routes = [
           { path: '', component: RoomFeelingsComponent, },
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
+          { path: 'login', component: LoginComponent, }
+
         ] },
     ]
   },
