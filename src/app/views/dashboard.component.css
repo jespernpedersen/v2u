@@ -1,6 +1,6 @@
 .app {
     height: 100vh;
-    background: linear-gradient(180deg, rgba(100, 243, 140, 1) 0%, rgba(0, 85, 0, 1) 100%);
+    background: linear-gradient(180deg, rgb(5, 117, 230) 0%, rgb(2, 27, 121) 100%);
     margin-top: -1px;
     padding-top: 1px;
     /*required to avoid margin collapse*/
