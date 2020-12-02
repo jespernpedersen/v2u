@@ -3,15 +3,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 // Main Component
-import { TemperatureComponent } from './temperature.component';
-
-// Shared Components
-import { GoBackComponent } from '../../../shared/_components/GoBack/goback.component';
+import { StatusComponent } from './status.component';
 
 
 @NgModule({
   declarations: [
-    TemperatureComponent, GoBackComponent
+    StatusComponent
   ],
   imports: [
     CommonModule,
@@ -20,4 +17,4 @@ import { GoBackComponent } from '../../../shared/_components/GoBack/goback.compo
   providers: [],
   exports: []
 })
-export class TemperatureModule { }
+export class StatusModule { }

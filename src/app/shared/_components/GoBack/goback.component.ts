@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
     templateUrl: './goback.component.html',
     styleUrls: ['goback.component.css'],
 })
+
 export class GoBackComponent {
     constructor(private _location: Location) {}
   

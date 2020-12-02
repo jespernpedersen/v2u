@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import {Router} from '@angular/router';
   
 @Component({
     selector: 'view-confirmation',
@@ -6,7 +7,9 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
     styleUrls: ['confirmation.component.css'],
 })
   
-export class ConfirmationComponent implements OnInit, AfterViewInit {
+export class ConfirmationComponent implements AfterViewInit {
+    constructor(private router: Router) {}
+
     inputRange;
     maxValue = 150;
     speed = 12;
@@ -14,8 +17,6 @@ export class ConfirmationComponent implements OnInit, AfterViewInit {
     rafID;
     isActive = false;
 
-    ngOnInit() {
-    }
     ngAfterViewInit() {
         this.inputRange = document.getElementsByClassName('pullee')[0];
         this.inputRange.min = 0;
@@ -56,7 +57,7 @@ export class ConfirmationComponent implements OnInit, AfterViewInit {
         this.currValue = this.currValue - this.speed;
     }
     successHandler() {
-        alert("Confirmed!");
+        this.navigatetoStatus();
 
         // Reset User Input
         this.inputRange.value = 0;
@@ -81,4 +82,8 @@ export class ConfirmationComponent implements OnInit, AfterViewInit {
             this.confirmEndHandler();
         });
     }
+
+    navigatetoStatus() {
+        this.router.navigateByUrl('/status');
+     }
 }

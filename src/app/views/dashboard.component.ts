@@ -37,6 +37,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         case "/confirmation":
           this.addSpecial();
           break;
+        case "/status": 
+          this.addSpecial();
+          break;
         default: break;
       }
     }

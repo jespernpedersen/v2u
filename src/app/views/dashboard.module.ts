@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RoomFeelingsModule } from './feelings/room/room.module';
 import { TemperatureModule } from './feelings/temperature/temperature.module';
 import { HumidityModule } from './feelings/humidity/humidity.module';
+import { StatusModule } from './request/status/status.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HumidityModule } from './feelings/humidity/humidity.module';
     MatToolbarModule,
     RoomFeelingsModule,
     TemperatureModule,
-    HumidityModule
+    HumidityModule,
+    StatusModule
   ],
   providers: [],
   exports: [
