@@ -85,5 +85,8 @@ export class ConfirmationComponent implements AfterViewInit {
 
     navigatetoStatus() {
         this.router.navigateByUrl('/status');
-     }
+    }
+    addMore() {
+        this.router.navigateByUrl('/');
+    }
 }

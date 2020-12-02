@@ -1,10 +1,22 @@
 <h1>I feel</h1>
 <ul class="feeling-list">
-    <li>Very hot</li>
-    <li>Too smelly</li>
+    <li routerLink="/humidity">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">whatshot</mat-icon>
+        Hot/Cold
+        <span class="item-remove">
+            <mat-icon aria-hidden="false" aria-label="Remove item">close</mat-icon>
+        </span>
+    </li>
+    <li routerLink="/humidity">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">dry</mat-icon>
+        Too Smelly
+        <span class="item-remove">
+            <mat-icon aria-hidden="false" aria-label="Remove item">close</mat-icon>
+        </span>
+    </li>
 </ul>
 <div class="add-more">
-    <span>Add more</span>
+    <span (click)="addMore()">Add more</span>
 </div>
 <div class="confirm-selection">
     <input type="range" value="0" class="pullee" />

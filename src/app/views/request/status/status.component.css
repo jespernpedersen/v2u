@@ -1,24 +1,41 @@
 :host {
     width: 100%;
-    color: #84d085;
+    color: #0675e8;
 }
 
 h1 {
     text-align: center;
     font-weight: 600;
-    color: #008000;
+    color: #021b78;
     margin-bottom: 1rem;
 }
 
 ul {
-    margin-left: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 ul li {
     text-align: left;
     font-size: 40px;
     line-height: normal;
-    font-weight: 600;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #7cb7f1;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 1.5rem;
+    text-align: center;
+    width: 50%;
+    max-width: 156px;
+}
+
+ul li:nth-of-type(even) {
+    margin-left: 15px;
 }
 
 .approval-count {
@@ -29,21 +46,21 @@ ul li {
 
 .count {
     border-radius: 100%;
-    border: 3px solid #017f02;
+    border: 3px solid #021b78;
     width: 5rem;
     height: 5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 37px;
-    color: #017f02;
+    color: #021b78;
     font-weight: 600;
 }
 
 .cancel-request {
     text-align: center;
     font-weight: 600;
-    color: #017f02;
+    color: #021b78;
     font-size: 22px;
     margin-top: 8rem;
 }

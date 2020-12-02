@@ -1,34 +1,70 @@
 :host {
     width: 100%;
-    color: #84d085;
+    color: #0675e8;
 }
 
 h1 {
     text-align: center;
     font-weight: 600;
-    color: #008000;
-    margin-bottom: 7rem;
+    color: #021b78;
 }
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
 }
 
 ul li {
     text-align: left;
     font-size: 40px;
     line-height: normal;
-    font-weight: 600;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #7cb7f1;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 1.5rem;
+    text-align: center;
+    width: 40%;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-remove {
+    height: 18px;
+    width: 18px;
+    background-color: #021b78;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-remove .mat-icon {
+    font-size: 14px;
+}
+
+mat-icon {
+    display: inline-block;
+    font-size: 20px;
+    height: auto;
 }
 
 .add-more {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2rem;
     font-size: 20px;
     font-weight: 500;
+    color: #0675e8;
+    margin-bottom: 10rem;
 }
 
 .add-more span {
@@ -39,7 +75,6 @@ ul li {
 /* Slide to Confirm */
 
 .confirm-selection {
-    margin-top: 10rem;
     position: relative;
     width: 100%;
 }
@@ -54,7 +89,7 @@ ul li {
     transform: translate(-50%, -50%);
     font-size: 20px;
     pointer-events: none;
-    color: #008000;
+    color: #021b78;
 }
 
 .pullee {
@@ -94,7 +129,7 @@ ul li {
     width: 4.2rem;
     height: 4rem;
     border-radius: 40%;
-    background: #52a851;
+    background: #021b78;
     transform-origin: 50% 50%;
     transform: scale(1);
     transition: transform ease-out 100ms;
@@ -103,12 +138,12 @@ ul li {
 }
 
 .pullee::-moz-range-thumb {
-    border: 0;
+    appearance: none;
     display: block;
-    width: 1.3rem;
-    height: 100%;
-    border-radius: 50%;
-    background: #52a851;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
     transform-origin: 50% 50%;
     transform: scale(1);
     transition: transform ease-out 100ms;
@@ -117,12 +152,12 @@ ul li {
 }
 
 .pullee::-ms-thumb {
-    border: 0;
+    appearance: none;
     display: block;
-    width: 1.3rem;
-    height: 100%;
-    border-radius: 50%;
-    background: #52a851;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
     transform-origin: 50% 50%;
     transform: scale(1);
     transition: transform ease-out 100ms;
@@ -135,14 +170,14 @@ ul li {
     padding: 0rem;
     box-sizing: content-box;
     border-radius: 2rem;
-    background-color: #d4ead5;
+    background-color: #7cb7f1;
 }
 
 .pullee::-moz-range-track {
     height: 1.3rem;
     box-sizing: content-box;
     border-radius: 1rem;
-    background-color: #d4ead5;
+    background-color: #7cb7f1;
 }
 
 .pullee::-moz-focus-outer {
@@ -155,7 +190,7 @@ ul li {
     padding: 0rem;
     box-sizing: content-box;
     border-radius: 1rem;
-    background-color: #d4ead5;
+    background-color: #7cb7f1;
     color: transparent;
 }
 
