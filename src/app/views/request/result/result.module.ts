@@ -6,8 +6,10 @@ import { RouterModule } from '@angular/router';
 // Main Component
 import { ResultComponent } from './result.component';
 
-
+// Material Design
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [
     ResultComponent
@@ -15,7 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   exports: []
