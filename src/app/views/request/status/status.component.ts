@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
   
 export class StatusComponent {
-
+    votecount : number = 0;
+    totalvotes : number = 4;
 }
