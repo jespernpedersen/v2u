@@ -1,4 +1,7 @@
 <h1 [ngClass]="{'applying': !showReturn }">{{ title }}</h1>
+<div class="completed" [ngClass]="{'active': showReturn }">
+    <span><mat-icon>done</mat-icon></span>
+</div>
 <ul class="result-list">
     <li *ngFor="let item of list" class="{{ item.status }}">
         <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
@@ -12,6 +15,7 @@
         </span>
     </li>
 </ul>
-<div class="return" routerLink="/" [ngClass]="{'active': showReturn }">
-    Return
+<div class="return" [ngClass]="{'active': showReturn }">
+    <button routerLink="/">
+        <mat-icon aria-hidden="false" aria-label="Go home">home</mat-icon>Return</button>
 </div>

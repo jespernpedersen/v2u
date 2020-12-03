@@ -7,7 +7,6 @@ h1 {
     text-align: center;
     font-weight: 600;
     color: #021b78;
-    margin-bottom: 10rem;
     font-size: 20px;
 }
 
@@ -18,7 +17,38 @@ ul.result-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
+}
+
+div.completed {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+div.completed.active {
+    opacity: 1;
+}
+
+div.completed span {
+    color: #FFF;
+    background-color: #021b78;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    text-align: center;
+}
+
+div.completed span mat-icon {
+    font-size: 7rem;
+    height: auto;
+    width: auto;
 }
 
 ul.result-list>li {
@@ -106,6 +136,26 @@ ul li>mat-icon {
 .return.active {
     pointer-events: all;
     opacity: 1;
+}
+
+button {
+    border-radius: 2.5rem;
+    border: 0;
+    background-image: none;
+    padding: 25px 50px 25px 38px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #021b78;
+    line-height: normal;
+}
+
+button mat-icon {
+    vertical-align: middle;
+    font-size: 28px;
+    margin-right: 13px;
+    height: auto;
+    margin-top: -7px;
 }
 
 .applying:after {

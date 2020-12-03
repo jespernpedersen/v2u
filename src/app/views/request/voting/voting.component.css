@@ -15,13 +15,37 @@ ul.feeling-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 ul.feeling-list li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+}
+
+ul.feeling-list li {
+    right: -500px;
+    left: auto;
+}
+
+ul.feeling-list li.selected {
+    right: 0;
+    left: 50%;
+}
+
+ul.feeling-list li div {
     text-align: left;
     font-size: 40px;
     font-weight: 400;
@@ -36,10 +60,8 @@ ul.feeling-list li {
     margin-bottom: 15px;
     vertical-align: middle;
     display: none;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-ul.feeling-list li.selected {
+    grid-template-columns: 1fr 3fr 0.5fr;
+    transition: 0.3s ease-in-out;
     display: grid;
 }
 
@@ -69,6 +91,17 @@ ul.pagination li.active {
 
 ul.pagination li:not(:last-of-type) {
     margin-right: 10px;
+}
+
+ul.feeling-list li div.item-wrapper.approved {
+    background-color: #cce6cb;
+    color: #008001;
+    transition: 0.3s ease-in-out;
+}
+
+ul.feeling-list li div.item-wrapper.denied {
+    background-color: #fecbd0;
+    color: #f90014;
 }
 
 .item-remove {
@@ -260,4 +293,41 @@ mat-icon {
 
 .pullee::-ms-tooltip {
     display: none;
+}
+
+.status {
+    text-align: center;
+    margin-top: 2rem;
+    color: #021b78;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.status.active {
+    opacity: 1;
+}
+
+.status:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 5000ms infinite;
+    animation: ellipsis steps(4, end) 5000ms infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
 }
