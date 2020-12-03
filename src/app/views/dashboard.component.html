@@ -1,9 +1,12 @@
 <div class="app">
-    <header>
-        <span class="brand-name">Vent2U</span>
-        <button type="button" class="zone" routerLink="zones">Zone 2</button>
-    </header>
     <div class="app-container">
+        <header>
+            <span class="brand-name">Vent2U</span>
+            <button type="button" routerLink="zones" class="zone">
+                Zone 2
+                <mat-icon aria-hidden="false" aria-label="Select choose">create</mat-icon>
+            </button>
+        </header>
         <div class="app-content">
             <router-outlet></router-outlet>
         </div>

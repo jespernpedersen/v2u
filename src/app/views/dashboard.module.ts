@@ -8,12 +8,17 @@ import { DashboardComponent } from './dashboard.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
 import { ZoneViewModule } from './zone-view/zone-view.module';
 
+import { TemperatureModule } from './feelings/temperature/temperature.module';
+import { HumidityModule } from './feelings/humidity/humidity.module';
+import { ConfirmationModule } from './request/confirmation/confirmation.module';
+import { StatusModule } from './request/status/status.module';
+import { VotingModule } from './request/voting/voting.module';
+import { ResultModule } from './request/result/result.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +28,14 @@ import { ZoneViewModule } from './zone-view/zone-view.module';
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule,
     RoomFeelingsModule,
-    ZoneViewModule
+    ZoneViewModule,
+    TemperatureModule,
+    HumidityModule,
+    ConfirmationModule,
+    StatusModule,
+    VotingModule,
+    ResultModule
   ],
   providers: [],
   exports: [

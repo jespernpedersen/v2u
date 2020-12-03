@@ -9,7 +9,7 @@ import { ZoneViewComponent } from './zone-view.component';
 import { RoomsService } from 'src/app/services/rooms.service';
 import { VentsService } from 'src/app/services/vents.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ZoneGridModule } from 'src/app/shared/zone-grid/zone-grid.module';
+import { ZoneGridModule } from 'src/app/shared/_components/zone-grid/zone-grid.module';
 import { UsersService } from 'src/app/services/users.service';
 
 

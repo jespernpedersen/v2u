@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Vent } from '../../../models/vent.model';
+import { Vent } from '../../../../models/vent.model';
 
 
 @Component({

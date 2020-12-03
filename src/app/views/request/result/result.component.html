@@ -1,0 +1,17 @@
+<h1 [ngClass]="{'applying': !showReturn }">{{ title }}</h1>
+<ul class="result-list">
+    <li *ngFor="let item of list" class="{{ item.status }}">
+        <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+        {{ item.name }}
+        <span *ngIf="!item.status">
+            <mat-spinner [diameter]="25"></mat-spinner>
+        </span>
+        <span class="item-status" *ngIf='item.status'>
+            <mat-icon *ngIf="item.status=='approved'">done</mat-icon>
+            <mat-icon *ngIf="item.status=='denied'">close</mat-icon>
+        </span>
+    </li>
+</ul>
+<div class="return" routerLink="/" [ngClass]="{'active': showReturn }">
+    Return
+</div>

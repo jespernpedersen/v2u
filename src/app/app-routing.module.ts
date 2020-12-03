@@ -5,11 +5,16 @@ import { AppComponent } from './app.component';
 
 // Login Routes
 import { DashboardComponent } from './views/dashboard.component';
-import { HumidityComponent } from './views/feelings/humidity/humidity.component';
 
 // Child Route Dashboard
 import { RoomFeelingsComponent } from './views/feelings/room/room.component';
 import { ZoneViewComponent } from './views/zone-view/zone-view.component';
+import { HumidityComponent } from './views/feelings/humidity/humidity.component';
+import { TemperatureComponent } from './views/feelings/temperature/temperature.component';
+import { ConfirmationComponent } from './views/request/confirmation/confirmation.component';
+import { StatusComponent } from './views/request/status/status.component';
+import { VotingComponent } from './views/request/voting/voting.component';
+import { ResultComponent } from './views/request/result/result.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -18,15 +23,19 @@ const routes: Routes = [
         path: '', component: DashboardComponent,
         children: [
           { path: '', component: RoomFeelingsComponent, },
+          // Feelings Routes
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
         ]},
-        {
-          path: 'zones', component: ZoneViewComponent
-        }
-    ]
-  },
-];
+          { path: 'zones', component: ZoneViewComponent },
+          { path: 'temperature', component: TemperatureComponent, },
+          // Request Routes
+          { path: 'confirmation', component: ConfirmationComponent, },
+          { path: 'status', component: StatusComponent },
+          { path: 'voting', component: VotingComponent },
+          { path: 'result', component: ResultComponent },
+        ] },
+    ];
 
 @NgModule({
   imports: [

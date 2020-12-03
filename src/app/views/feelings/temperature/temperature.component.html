@@ -1,10 +1,10 @@
-<h1>Humidity</h1>
-<h2>How do you feel?</h2>
+<h1>Temperature</h1>
 <ul class="humidity">
     <li *ngFor="let item of humidity" (click)="selectItem(item.id)" [ngClass]="{'selected': item.selected }">
         {{ item.name }}
     </li>
 </ul>
 <div class="confirm-wrapper" [ngClass]="{'active': selectedItem }">
-    <button routerLink="/temperature">Confirm</button>
+    <button routerLink="/confirmation">Confirm</button>
 </div>
+<goback></goback>

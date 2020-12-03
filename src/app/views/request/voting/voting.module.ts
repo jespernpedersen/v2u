@@ -4,24 +4,24 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Main Component
-import { HumidityComponent } from './humidity.component';
+import { VotingComponent } from './voting.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
   declarations: [
-    HumidityComponent
+    VotingComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule,
-    MatToolbarModule
+    MatIconModule
   ],
   providers: [],
-  exports: []
+  exports: [
+      
+  ]
 })
-export class HumidityModule { }
+export class VotingModule { }
