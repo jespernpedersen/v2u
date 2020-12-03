@@ -15,6 +15,13 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    transition: 0.3s ease-in-out;
+}
+
+ul.only-one {
     justify-content: center;
 }
 
@@ -25,17 +32,24 @@ ul li {
     font-weight: 400;
     color: #FFF;
     background-color: #7cb7f1;
-    font-size: 16px;
-    display: inline-block;
+    font-size: 14px;
     padding: 10px 12px;
     border-radius: 1.5rem;
     text-align: center;
-    width: 50%;
-    max-width: 156px;
+    width: 40%;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    grid-template-columns: 1fr 6fr 0.5fr;
+    transition: 0.3s ease-in-out;
+    display: grid;
 }
 
-ul li:nth-of-type(even) {
-    margin-left: 15px;
+ul li mat-icon {
+    display: inline-block;
+    font-size: 20px;
+    height: auto;
+    justify-self: start;
+    display: flex;
 }
 
 .approval-count {

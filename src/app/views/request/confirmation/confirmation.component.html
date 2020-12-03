@@ -1,16 +1,9 @@
 <h1>I feel</h1>
-<ul class="feeling-list">
-    <li routerLink="/humidity">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">whatshot</mat-icon>
-        Hot/Cold
-        <span class="item-remove">
-            <mat-icon aria-hidden="false" aria-label="Remove item">close</mat-icon>
-        </span>
-    </li>
-    <li routerLink="/humidity">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">dry</mat-icon>
-        Too Smelly
-        <span class="item-remove">
+<ul class="feeling-list" [ngClass]="{'only-one': list.length==1}">
+    <li *ngFor="let item of list" class="{{ item.status }}">
+        <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+        {{ item.name }}
+        <span class="item-remove" (click)="removeItem(item.id)">
             <mat-icon aria-hidden="false" aria-label="Remove item">close</mat-icon>
         </span>
     </li>

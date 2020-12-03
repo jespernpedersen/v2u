@@ -1,10 +1,12 @@
 <h1>Waiting for approval</h1>
 <div class="approval-count">
-    <div class="count">0/4</div>
+    <div class="count">{{ votecount }}/{{ totalvotes }}</div>
 </div>
-<ul class="feeling-list">
-    <li>Very hot</li>
-    <li>Too smelly</li>
+<ul class="feeling-list" [ngClass]="{'only-one': list.length==1}">
+    <li *ngFor="let item of list" class="{{ item.status }}">
+        <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+        {{ item.name }}
+    </li>
 </ul>
 <div class="cancel-request" routerLink="/">
     Cancel Request
