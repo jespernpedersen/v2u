@@ -10,6 +10,21 @@ import {Router} from '@angular/router';
 export class ConfirmationComponent implements AfterViewInit {
     constructor(private router: Router) {}
 
+    // List
+    list = [
+        {
+            id: 0,
+            icon: "whatshot",
+            name: "Hot/Cold"
+        },
+        {
+            id: 1,
+            icon: "dry",
+            name: "Too smelly"
+        }
+    ];
+
+    // Confirmation Slider
     inputRange;
     maxValue = 150;
     speed = 12;
@@ -88,5 +103,13 @@ export class ConfirmationComponent implements AfterViewInit {
     }
     addMore() {
         this.router.navigateByUrl('/');
+    }
+
+    removeItem(id) {
+        this.list.forEach((item, index) => {
+            if(item.id == id) {
+                this.list.splice(index, 1);
+            }
+        })
     }
 }
