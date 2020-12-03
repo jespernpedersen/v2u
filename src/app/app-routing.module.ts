@@ -12,6 +12,7 @@ import { HumidityComponent } from './views/feelings/humidity/humidity.component'
 import { TemperatureComponent } from './views/feelings/temperature/temperature.component';
 import { ConfirmationComponent } from './views/request/confirmation/confirmation.component';
 import { StatusComponent } from './views/request/status/status.component';
+import { VotingComponent } from './views/request/voting/voting.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -27,6 +28,7 @@ const routes: Routes = [
           // Request Routes
           { path: 'confirmation', component: ConfirmationComponent, },
           { path: 'status', component: StatusComponent },
+          { path: 'voting', component: VotingComponent },
         ] },
     ]
   },

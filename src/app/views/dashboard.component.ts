@@ -40,6 +40,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         case "/status": 
           this.addSpecial();
           break;
+        case "/voting":
+          this.addSpecial();
+          break;
         default: break;
       }
     }
