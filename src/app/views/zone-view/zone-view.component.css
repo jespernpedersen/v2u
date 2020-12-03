@@ -1,0 +1,16 @@
+h2{
+    text-align: center;
+    margin-top: 63px;
+}
+
+button.close{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+button.close:focus{
+    outline: none;
+}

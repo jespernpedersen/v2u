@@ -8,6 +8,7 @@ import { DashboardComponent } from './views/dashboard.component';
 
 // Child Route Dashboard
 import { RoomFeelingsComponent } from './views/feelings/room/room.component';
+import { ZoneViewComponent } from './views/zone-view/zone-view.component';
 import { HumidityComponent } from './views/feelings/humidity/humidity.component';
 import { TemperatureComponent } from './views/feelings/temperature/temperature.component';
 import { ConfirmationComponent } from './views/request/confirmation/confirmation.component';
@@ -25,6 +26,8 @@ const routes: Routes = [
           // Feelings Routes
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
+        ]},
+          { path: 'zones', component: ZoneViewComponent },
           { path: 'temperature', component: TemperatureComponent, },
           // Request Routes
           { path: 'confirmation', component: ConfirmationComponent, },
@@ -32,9 +35,7 @@ const routes: Routes = [
           { path: 'voting', component: VotingComponent },
           { path: 'result', component: ResultComponent },
         ] },
-    ]
-  },
-];
+    ];
 
 @NgModule({
   imports: [

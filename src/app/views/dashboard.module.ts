@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard.component';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
+import { ZoneViewModule } from './zone-view/zone-view.module';
+
 import { TemperatureModule } from './feelings/temperature/temperature.module';
 import { HumidityModule } from './feelings/humidity/humidity.module';
 import { ConfirmationModule } from './request/confirmation/confirmation.module';
@@ -27,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule,
     MatIconModule,
     RoomFeelingsModule,
+    ZoneViewModule,
     TemperatureModule,
     HumidityModule,
     ConfirmationModule,

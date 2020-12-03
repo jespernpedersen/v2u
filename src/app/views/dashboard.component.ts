@@ -9,6 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class DashboardComponent implements OnInit, AfterViewInit {
   page;
   url;
+  userId = 1;
 
   constructor(private _router: Router){}
 
@@ -35,17 +36,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
           this.removeSpecial();
           break;
         case "/confirmation":
-          this.addSpecial();
-          break;
         case "/status": 
-          this.addSpecial();
-          break;
         case "/voting":
-          this.addSpecial();
-          break;
         case "/result": 
           this.addSpecial();
-          break;
         default: break;
       }
     }
