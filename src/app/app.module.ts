@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 import { DashboardModule } from './views/dashboard.module';
 
-
 @NgModule({
   declarations: [
     AppComponent

@@ -1,0 +1,17 @@
+  #booking-grid, #group-grid{
+    display: grid;
+    justify-items: center;
+}
+
+#booking-grid {
+    grid-gap: 25px;
+    padding: 15px;
+}
+
+#group-grid{
+    grid-gap: 10px
+}
+
+.loading p{
+    text-align: center;
+}

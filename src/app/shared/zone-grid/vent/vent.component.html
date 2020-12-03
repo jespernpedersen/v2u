@@ -1,0 +1,7 @@
+<button *ngIf="vent.ID != currentVentId" mat-raised-button type="button" (click)="claim($event)">Zone {{vent.ID}}
+    <span class="circle" *ngIf="vent.user_count > 0">{{vent.user_count}} </span>
+  </button>
+  
+  <button *ngIf="vent.ID == currentVentId" mat-raised-button class="selected" type="button" (click)="unclaim($event)">Zone {{vent.ID}}
+    <span class="circle" *ngIf="vent.user_count > 0">{{vent.user_count}} </span>
+  </button>

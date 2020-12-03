@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
+import { ZoneViewModule } from './zone-view/zone-view.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RoomFeelingsModule } from './feelings/room/room.module';
     RouterModule,
     MatIconModule,
     MatToolbarModule,
-    RoomFeelingsModule
+    RoomFeelingsModule,
+    ZoneViewModule
   ],
   providers: [],
   exports: [

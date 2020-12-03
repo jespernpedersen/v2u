@@ -1,0 +1,11 @@
+<div *ngIf="isLoaded" id="booking-grid" [ngStyle]="{'grid-template-columns': gridStyle}">
+    <div class="group" *ngFor="let ventGroup of ventGroups" [style.grid-column]="'span 1'">
+        <div id="group-grid" class="group-grid" [ngStyle]="{'grid-template-columns': ventGroup.grid_style}">
+            <vent [vent]="vent" [currentVentId]="currentVentId" (ventUnclaimedEvent)="unclaimVent($event)" (ventClaimedEvent)="claimVent($event)" *ngFor="let vent of ventGroup.vents"></vent>
+        </div>
+    </div>
+</div>
+
+<div class="loading" *ngIf="!isLoaded">
+    <p>Loading vents...</p>
+</div>
