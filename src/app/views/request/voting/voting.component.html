@@ -1,23 +1,26 @@
 <h1>Someone thinks the room is</h1>
 <div class="voting">
     <ul class="feeling-list">
-        <li routerLink="/humidity" class="selected">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">local_fire_department</mat-icon>
-            Hot/Cold
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">dry</mat-icon>
-            Too Smelly
+        <li *ngFor="let item of list" [ngClass]="{'selected': item.selected }">
+            <div class="item-wrapper" class="{{ item.status }}">
+                <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+                {{ item.name }}
+                <span class="item-status" *ngIf='item.status'>
+                <mat-icon *ngIf="item.status=='approved'">done</mat-icon>
+                <mat-icon *ngIf="item.status=='denied'">close</mat-icon>
+            </span>
+            </div>
         </li>
     </ul>
     <ul class="pagination">
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
+        <li *ngFor="let item of list" [ngClass]="{'active': item.selected }">{{ item.id }}</li>
     </ul>
 </div>
 <div class="confirm-selection">
     <input type="range" value="50" class="pullee" />
     <div class="disagree"><span>Disagree</span></div>
     <div class="agree"><span>Agree</span></div>
+</div>
+<div class="status" [ngClass]="{'active': isCompleted }">
+    Redirecting you to status page
 </div>
