@@ -19,6 +19,7 @@
     margin-right: auto;
     padding-left: 30px;
     padding-right: 30px;
+    height: 100%;
 }
 
 .app-content {
@@ -26,6 +27,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    height: calc(100% - 53px);
 }
 
 
@@ -88,12 +90,12 @@ nav ul li {
     text-align: center;
 }
 
-.brand-name{
+.brand-name {
     margin-left: 15px;
 }
 
-.zone{
-    background-color: rgba(255,255,255,0.4);
+.zone {
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 20px 0 0 20px;
     padding: 7px 15px;
     color: white;

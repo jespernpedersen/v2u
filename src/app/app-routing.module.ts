@@ -26,14 +26,15 @@ const routes: Routes = [
           // Feelings Routes
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
-        ]},
-          { path: 'zones', component: ZoneViewComponent },
           { path: 'temperature', component: TemperatureComponent, },
+          
           // Request Routes
           { path: 'confirmation', component: ConfirmationComponent, },
           { path: 'status', component: StatusComponent },
           { path: 'voting', component: VotingComponent },
           { path: 'result', component: ResultComponent },
+        ]},
+          { path: 'zones', component: ZoneViewComponent },
         ] },
     ];
 
