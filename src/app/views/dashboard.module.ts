@@ -15,6 +15,7 @@ import { TemperatureModule } from './feelings/temperature/temperature.module';
 import { HumidityModule } from './feelings/humidity/humidity.module';
 import { ConfirmationModule } from './request/confirmation/confirmation.module';
 import { StatusModule } from './request/status/status.module';
+import { VotingModule } from './request/voting/voting.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StatusModule } from './request/status/status.module';
     TemperatureModule,
     HumidityModule,
     ConfirmationModule,
-    StatusModule
+    StatusModule,
+    VotingModule
   ],
   providers: [],
   exports: [
