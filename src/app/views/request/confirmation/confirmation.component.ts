@@ -31,6 +31,7 @@ export class ConfirmationComponent implements AfterViewInit {
     currValue = 12;
     rafID;
     isActive = false;
+    isSwiping = false;
 
     ngAfterViewInit() {
         this.inputRange = document.getElementsByClassName('pullee')[0];
@@ -42,12 +43,14 @@ export class ConfirmationComponent implements AfterViewInit {
 
     // Set value
     confirmStartHandler() {
+        this.isSwiping = true;
         window.cancelAnimationFrame(this.rafID);
         this.currValue = this.inputRange.value;
     }
 
     // Check if completed
     confirmEndHandler() {
+        this.isSwiping = false;
         this.currValue = this.inputRange.value;
 
         if(this.currValue >= this.maxValue) {
