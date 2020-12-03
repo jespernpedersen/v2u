@@ -2,21 +2,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-// Main Component
-import { TemperatureComponent } from './temperature.component';
 
-import { GoBackModule } from '../../../shared/_components/GoBack/goback.module';
+// Main Component
+import { GoBackComponent } from './goback.component';
+
 
 @NgModule({
   declarations: [
-    TemperatureComponent
+    GoBackComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    GoBackModule
+    RouterModule
   ],
   providers: [],
-  exports: []
+  exports: [GoBackComponent]
 })
-export class TemperatureModule { }
+export class GoBackModule { }

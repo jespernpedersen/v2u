@@ -6,9 +6,6 @@ import { RouterModule } from '@angular/router';
 // Main Component
 import { DashboardComponent } from './dashboard.component';
 
-// Subcomponents
-import { MatIconModule } from '@angular/material/icon';
-
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
 import { TemperatureModule } from './feelings/temperature/temperature.module';
@@ -17,6 +14,9 @@ import { ConfirmationModule } from './request/confirmation/confirmation.module';
 import { StatusModule } from './request/status/status.module';
 import { VotingModule } from './request/voting/voting.module';
 import { ResultModule } from './request/result/result.module';
+
+// Material Design
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [

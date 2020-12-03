@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 
+import { GoBackModule } from '../../../shared/_components/GoBack/goback.module';
+
 @NgModule({
   declarations: [
     HumidityComponent
@@ -19,7 +21,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    GoBackModule
   ],
   providers: [],
   exports: []
