@@ -10,7 +10,7 @@ export class ResultComponent implements OnInit {
     list = [
         {
             id: 1,
-            icon: "whatshot",
+            icon: "local_fire_department",
             name: "Hot/Cold",
             status: ""
         },
@@ -21,6 +21,10 @@ export class ResultComponent implements OnInit {
             status: ""
         }
     ];
+
+    title = "Applying changes";
+
+    showReturn = false;
 
     ngOnInit() {
         // Placeholder Animation Showcase
@@ -38,5 +42,11 @@ export class ResultComponent implements OnInit {
 
     denyItem() {
         this.list[1].status = "denied";
+        this.changesCompleted();
+    }
+
+    changesCompleted() {
+        this.showReturn = true;
+        this.title = "Changes have been applied";
     }
 }

@@ -13,6 +13,20 @@ export class StatusComponent implements OnInit {
     votecount : number = 0;
     totalvotes : number = 4;
 
+    // List
+    list = [
+        {
+            id: 0,
+            icon: "local_fire_department",
+            name: "Hot/Cold"
+        },
+        {
+            id: 1,
+            icon: "dry",
+            name: "Too smelly"
+        }
+    ];
+
     ngOnInit() {
         this.addVote();  
     }

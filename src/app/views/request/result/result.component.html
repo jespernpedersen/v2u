@@ -1,4 +1,4 @@
-<h1>Applying changes...</h1>
+<h1 [ngClass]="{'applying': !showReturn }">{{ title }}</h1>
 <ul class="result-list">
     <li *ngFor="let item of list" class="{{ item.status }}">
         <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
@@ -12,6 +12,6 @@
         </span>
     </li>
 </ul>
-<div class="return" routerLink="/">
+<div class="return" routerLink="/" [ngClass]="{'active': showReturn }">
     Return
 </div>

@@ -2,14 +2,10 @@
 <div class="approval-count">
     <div class="count">{{ votecount }}/{{ totalvotes }}</div>
 </div>
-<ul class="feeling-list">
-    <li>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">whatshot</mat-icon>
-        Hot/Cold
-    </li>
-    <li>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">dry</mat-icon>
-        Too Smelly
+<ul class="feeling-list" [ngClass]="{'only-one': list.length==1}">
+    <li *ngFor="let item of list" class="{{ item.status }}">
+        <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+        {{ item.name }}
     </li>
 </ul>
 <div class="cancel-request" routerLink="/">

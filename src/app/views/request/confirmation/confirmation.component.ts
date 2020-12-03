@@ -14,7 +14,7 @@ export class ConfirmationComponent implements AfterViewInit {
     list = [
         {
             id: 0,
-            icon: "whatshot",
+            icon: "local_fire_department",
             name: "Hot/Cold"
         },
         {

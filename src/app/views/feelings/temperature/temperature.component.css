@@ -1,69 +1,53 @@
-:host {
-    width: 100%;
-}
-
 h1,
 h2 {
     text-align: center;
     font-weight: 300;
 }
 
-.temperature {
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+}
+
+ul li {
+    font-size: 24px;
     text-align: center;
-    height: 176px;
-    overflow-y: scroll;
-    list-style-type: none;
-    scroll-snap-type: y mandatory;
-    padding-left: 0;
-    margin: 0;
-    margin-top: 15vh;
-}
-
-.temperature::before,
-.temperature::after {
-    content: "";
-    flex: 0 0 50%;
-}
-
-ul.temperature::-webkit-scrollbar {
-    display: none;
-}
-
-ul.temperature::-moz-scrollbar {
-    display: none;
-}
-
-.temperature li {
-    font-size: 50px;
-    line-height: 70px;
-    height: 50px;
-    display: block;
-    scroll-snap-align: center;
-    padding: 5px 0;
-    color: #fff;
-    position: relative;
-    margin: 5px 0;
-}
-
-.temperature li.selected p {
-    transform: scale(1.75);
-    color: white;
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-}
-
-.temperature li p {
-    margin: 0;
+    line-height: normal;
     opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: calc( 50vw - ( 107.4px / 2));
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.hide {
-    visibility: hidden;
+ul li.selected {
+    opacity: 1;
+    transform: scale(2);
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.hidden {
-    display: none;
+.confirm-wrapper {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.confirm-wrapper.active {
+    opacity: 1;
+}
+
+button {
+    display: inline-block;
+    border-radius: 2.5rem;
+    border: 0;
+    background-image: none;
+    padding: 25px 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #021b78;
 }
