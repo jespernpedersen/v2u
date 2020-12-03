@@ -108,6 +108,26 @@ ul li>mat-icon {
     opacity: 1;
 }
 
+button {
+    border-radius: 2.5rem;
+    border: 0;
+    background-image: none;
+    padding: 25px 50px 25px 38px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #021b78;
+    line-height: normal;
+}
+
+button mat-icon {
+    vertical-align: middle;
+    font-size: 28px;
+    margin-right: 13px;
+    height: auto;
+    margin-top: -7px;
+}
+
 .applying:after {
     overflow: hidden;
     display: inline-block;

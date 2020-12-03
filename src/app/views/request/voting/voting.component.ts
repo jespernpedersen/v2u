@@ -10,12 +10,35 @@ import { Router } from '@angular/router';
 export class VotingComponent implements AfterViewInit {
     constructor(private router: Router) {}
 
+    // Voting Slider
     inputRange;
     maxValue = 100;
     speed = 2;
     currValue = 12;
     rafID;
     isActive = false;
+
+    // Pagination Settings
+    transition = 3000;
+    isCompleted = false;
+
+    // List
+    list = [
+        {
+            id: 0,
+            icon: "local_fire_department",
+            name: "Hot/Cold",
+            status: "",
+            selected: true
+        },
+        {
+            id: 1,
+            icon: "dry",
+            name: "Too smelly",
+            status: "",
+            selected: false
+        }
+    ];
 
     ngAfterViewInit() {
         this.inputRange = document.getElementsByClassName('pullee')[0];
@@ -34,7 +57,6 @@ export class VotingComponent implements AfterViewInit {
     // Check if completed
     confirmEndHandler() {
         this.currValue = this.inputRange.value;
-        console.log(this.currValue);
 
         if(this.currValue >= this.maxValue) {
             this.agreeHandler();
@@ -79,16 +101,33 @@ export class VotingComponent implements AfterViewInit {
         this.currValue = Number(this.currValue) + this.speed;
     }
     disagreeHandler() {
-        alert("Disagree!");
-
+        this.list.forEach((item) => {
+            if(item.selected)  {
+                item.status = "denied";
+            }
+        })        
+        
         // Reset User Input
-        this.inputRange.value = 50;
+        setTimeout(() => {
+            this.inputRange.value = 50;
+        }, 500);
+        
+        this.findCurrentItem();
     }
     agreeHandler() {
-        alert("Agree!");
+        this.list.forEach((item) => {
+            if(item.selected)  {
+                item.status = "approved";
+            }
+        })
+        // alert("Agree!");
 
         // Reset User Input
-        this.inputRange.value = 50;
+        setTimeout(() => {
+            this.inputRange.value = 50;
+        }, 500);
+
+        this.findCurrentItem();
     }
 
     addEventListeners() {
@@ -113,5 +152,32 @@ export class VotingComponent implements AfterViewInit {
 
     navigatetoStatus() {
         this.router.navigateByUrl('/status');
+    }
+
+    // Pagination
+    nextItem(id) {
+        let nextId = id + 1;
+        this.list[id].selected = false;
+        this.list[nextId].selected = true;
+    }
+
+    findCurrentItem() {
+        this.list.forEach((item) => {
+            if(item.selected) {
+                // First item
+                if(item.id == 0) {
+                    setTimeout(() => {
+                        this.nextItem(item.id);
+                    }, 800)
+                } 
+                // Last item
+                if(item.id == this.list.length - 1) {
+                    this.isCompleted = true;
+                    setTimeout(() => {
+                        this.navigatetoStatus();
+                    }, 2500)
+                }
+            }
+        });
     }
 }

@@ -12,6 +12,7 @@
         </span>
     </li>
 </ul>
-<div class="return" routerLink="/" [ngClass]="{'active': showReturn }">
-    Return
+<div class="return" [ngClass]="{'active': showReturn }">
+    <button routerLink="/">
+        <mat-icon aria-hidden="false" aria-label="Go home">home</mat-icon>Return</button>
 </div>
