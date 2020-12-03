@@ -1,4 +1,7 @@
 <h1 [ngClass]="{'applying': !showReturn }">{{ title }}</h1>
+<div class="completed" [ngClass]="{'active': showReturn }">
+    <span><mat-icon>done</mat-icon></span>
+</div>
 <ul class="result-list">
     <li *ngFor="let item of list" class="{{ item.status }}">
         <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
