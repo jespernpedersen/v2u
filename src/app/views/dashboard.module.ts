@@ -16,6 +16,7 @@ import { HumidityModule } from './feelings/humidity/humidity.module';
 import { ConfirmationModule } from './request/confirmation/confirmation.module';
 import { StatusModule } from './request/status/status.module';
 import { VotingModule } from './request/voting/voting.module';
+import { ResultModule } from './request/result/result.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VotingModule } from './request/voting/voting.module';
     HumidityModule,
     ConfirmationModule,
     StatusModule,
-    VotingModule
+    VotingModule,
+    ResultModule
   ],
   providers: [],
   exports: [

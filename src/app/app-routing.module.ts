@@ -13,6 +13,7 @@ import { TemperatureComponent } from './views/feelings/temperature/temperature.c
 import { ConfirmationComponent } from './views/request/confirmation/confirmation.component';
 import { StatusComponent } from './views/request/status/status.component';
 import { VotingComponent } from './views/request/voting/voting.component';
+import { ResultComponent } from './views/request/result/result.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -29,6 +30,7 @@ const routes: Routes = [
           { path: 'confirmation', component: ConfirmationComponent, },
           { path: 'status', component: StatusComponent },
           { path: 'voting', component: VotingComponent },
+          { path: 'result', component: ResultComponent },
         ] },
     ]
   },

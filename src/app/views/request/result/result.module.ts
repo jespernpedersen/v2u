@@ -2,14 +2,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 // Main Component
-import { StatusComponent } from './status.component';
+import { ResultComponent } from './result.component';
 
 
 import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
-    StatusComponent
+    ResultComponent
   ],
   imports: [
     CommonModule,
@@ -19,4 +20,4 @@ import { MatIconModule } from '@angular/material/icon';
   providers: [],
   exports: []
 })
-export class StatusModule { }
+export class ResultModule { }
