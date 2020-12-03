@@ -90,3 +90,11 @@ ul li>mat-icon {
     font-size: 18px;
     height: auto;
 }
+
+.return {
+    text-align: center;
+    font-weight: 600;
+    color: #021b78;
+    font-size: 22px;
+    margin-top: 8rem;
+}
