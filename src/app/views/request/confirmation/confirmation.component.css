@@ -23,7 +23,6 @@ ul {
     margin-top: 7rem;
     margin-bottom: 10rem;
     height: 15rem;
-    overflow-y: scroll;
 }
 
 ul.only-one {
@@ -58,6 +57,7 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .item-remove .mat-icon {
@@ -76,6 +76,7 @@ mat-icon {
     font-size: 20px;
     font-weight: 500;
     color: #0675e8;
+    cursor: pointer;
 }
 
 .add-more span {

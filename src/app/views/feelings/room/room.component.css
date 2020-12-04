@@ -27,6 +27,7 @@ h1 {
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .questions li:not(:last-of-type) {
@@ -40,4 +41,18 @@ mat-icon {
     line-height: normal;
     height: auto;
     margin-bottom: 10px;
+}
+
+.confirmation {
+    display: inline-block;
+    border-radius: 2.5rem;
+    border: 0;
+    background-image: none;
+    padding: 25px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #021b78;
+    margin-top: 3rem;
+    cursor: pointer;
 }

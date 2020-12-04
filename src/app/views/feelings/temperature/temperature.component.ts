@@ -1,13 +1,15 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
     selector: 'view-temperature',
     templateUrl: './temperature.component.html',
     styleUrls: ['temperature.component.css'],
 })
 // export class TemperatureComponent implements AfterViewInit, OnInit 
-export class TemperatureComponent {
+export class TemperatureComponent implements OnInit {
+  constructor(private router: Router) {}
 
-    humidity = [
+    temperature = [
         {
           id: 0,
           name: "Very hot",
@@ -41,9 +43,11 @@ export class TemperatureComponent {
       ];
     
       selectedItem;
+
+      selectedList = [];
     
       selectItem(id) {
-        this.humidity.forEach((item) => {
+        this.temperature.forEach((item) => {
           if(item.id != id) {
             item.selected = false;
           }
@@ -52,6 +56,41 @@ export class TemperatureComponent {
           }
         });
         this.selectedItem = [];
-        this.selectedItem.push(this.humidity[id]);
+        this.selectedItem.push(this.temperature[id]);
+      }
+
+      confirmSelection() {
+        if(this.selectedItem[0].id < 3) {
+          let itemArray = {
+            id: 0,
+            icon: "local_fire_department",
+            name: this.selectedItem[0].name,
+            added: true
+          };
+          this.selectedList.push(itemArray);
+          history.pushState(this.selectedList, '', '');
+          this.router.navigate(['/confirmation'], {state: history.state});
+        }
+        else if(this.selectedItem[0].id > 3) {
+          let itemArray = {
+            id: 0,
+            icon: "ac_unit",
+            name: this.selectedItem[0].name,
+            added: true
+          };
+          this.selectedList.push(itemArray);
+          history.pushState(this.selectedList, '', '');
+          this.router.navigate(['/confirmation'], {state: history.state});
+        }
+      }
+
+      ngOnInit() {
+        if(history.state[0]) {
+          for (let key in history.state) {
+              if(history.state[key].name) {
+                  this.selectedList.push(history.state[key])
+              }
+          }
+        }
       }
 }
