@@ -103,6 +103,12 @@ import { Router } from '@angular/router';
       }
     }
 
+    confirmSelection() {
+     
+      history.pushState(this.selectedItems, '', '');
+      this.router.navigate(['/confirmation'], {state: history.state}); 
+    }
+
     ngOnInit() {
       if(history.state[0]) {
         for (let key in history.state) {

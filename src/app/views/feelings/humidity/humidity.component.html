@@ -6,6 +6,6 @@
     </li>
 </ul>
 <div class="confirm-wrapper" [ngClass]="{'active': selectedItem }">
-    <button routerLink="/temperature">Confirm</button>
+    <button (click)="confirmSelection()">Confirm</button>
 </div>
 <goback></goback>
