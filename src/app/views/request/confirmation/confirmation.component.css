@@ -23,7 +23,6 @@ ul {
     margin-top: 7rem;
     margin-bottom: 10rem;
     height: 15rem;
-    overflow-y: scroll;
 }
 
 ul.only-one {

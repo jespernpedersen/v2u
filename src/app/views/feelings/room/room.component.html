@@ -1,7 +1,7 @@
 <div class="room">
     <h1>How does the room feel?</h1>
     <ul class="questions">
-        <li *ngFor="let item of list" routerLink="/humidity">
+        <li *ngFor="let item of list" (click)="addItem(item)" [state]="item">
             <mat-icon aria-hidden="false" aria-label="Icon for {{ item.name }}">{{ item.icon }}</mat-icon>
             {{ item.name }}
         </li>

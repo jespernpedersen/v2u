@@ -1,5 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
-import {Router} from '@angular/router';
+import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
   
 @Component({
     selector: 'view-confirmation',
@@ -7,22 +8,11 @@ import {Router} from '@angular/router';
     styleUrls: ['confirmation.component.css'],
 })
   
-export class ConfirmationComponent implements AfterViewInit {
+export class ConfirmationComponent implements AfterViewInit, OnInit {
     constructor(private router: Router) {}
 
     // List
-    list = [
-        {
-            id: 0,
-            icon: "local_fire_department",
-            name: "Hot/Cold"
-        },
-        {
-            id: 1,
-            icon: "dry",
-            name: "Too smelly"
-        }
-    ];
+    list = [];
 
     // Confirmation Slider
     inputRange;
@@ -39,6 +29,16 @@ export class ConfirmationComponent implements AfterViewInit {
         this.inputRange.max = this.maxValue;
 
         this.addEventListeners();
+    }
+
+    ngOnInit() {
+        if(history.state[0]) {
+            for (let key in history.state) {
+                if(history.state[key].name) {
+                    this.list.push(history.state[key])
+                }
+            }
+        }
     }
 
     // Set value
@@ -105,10 +105,11 @@ export class ConfirmationComponent implements AfterViewInit {
         this.router.navigateByUrl('/status');
     }
     addMore() {
-        this.router.navigateByUrl('/');
+        this.router.navigate(['/'], {state: this.list});
     }
 
     removeItem(id) {
+        history.state.added = false;
         this.list.forEach((item, index) => {
             if(item.id == id) {
                 this.list.splice(index, 1);

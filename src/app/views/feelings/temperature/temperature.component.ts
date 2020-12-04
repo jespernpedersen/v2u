@@ -1,11 +1,13 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
     selector: 'view-temperature',
     templateUrl: './temperature.component.html',
     styleUrls: ['temperature.component.css'],
 })
 // export class TemperatureComponent implements AfterViewInit, OnInit 
-export class TemperatureComponent {
+export class TemperatureComponent implements OnInit {
+  constructor(private router: Router) {}
 
     humidity = [
         {
@@ -53,5 +55,9 @@ export class TemperatureComponent {
         });
         this.selectedItem = [];
         this.selectedItem.push(this.humidity[id]);
+      }
+
+      ngOnInit() {
+        console.log(history.state);
       }
 }
