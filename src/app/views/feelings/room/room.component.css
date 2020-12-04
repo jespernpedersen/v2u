@@ -27,6 +27,7 @@ h1 {
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .questions li:not(:last-of-type) {

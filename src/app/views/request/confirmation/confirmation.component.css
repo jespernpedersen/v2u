@@ -57,6 +57,7 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .item-remove .mat-icon {
