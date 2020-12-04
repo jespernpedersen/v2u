@@ -49,5 +49,5 @@ export class LoginComponent implements OnInit {
     password: this.password
   };
   this.loginSvc.Login(credentials);
-}
+  }
 }
