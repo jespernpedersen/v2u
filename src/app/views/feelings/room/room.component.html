@@ -1,33 +1,9 @@
 <div class="room">
     <h1>How does the room feel?</h1>
     <ul class="questions">
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">local_fire_department</mat-icon>
-            Hot/Cold
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">dry</mat-icon>
-            Too Smelly
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">toys</mat-icon>
-            Fresh air
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">whatshot</mat-icon>
-            Too sweaty
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">ac_unit</mat-icon>
-            Freezing
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">waves</mat-icon>
-            Too windy
-        </li>
-        <li routerLink="/humidity">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">invert_colors_off</mat-icon>
-            Humid/Dry
+        <li *ngFor="let item of list" routerLink="/humidity">
+            <mat-icon aria-hidden="false" aria-label="Icon for {{ item.name }}">{{ item.icon }}</mat-icon>
+            {{ item.name }}
         </li>
     </ul>
 </div>
