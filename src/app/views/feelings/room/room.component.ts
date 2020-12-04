@@ -69,10 +69,15 @@ import { Router } from '@angular/router';
     addItem(item) {
       // If list is empty
       if(this.selectedItems.length == 0) {
-        item.added = true;
-        this.selectedItems.push(item);
-        history.pushState(this.selectedItems, '', '');
-        this.router.navigate([item.routing], {state: history.state});
+        if(item.routing == "/confirmation") {
+          item.added = true;
+          this.selectedItems.push(item);
+          history.pushState(this.selectedItems, '', '');
+          this.router.navigate([item.routing], {state: history.state});
+        }
+        else {
+          this.router.navigate([item.routing], {state: history.state});
+        }
       }
       // If list has already has items
       else {
@@ -84,24 +89,27 @@ import { Router } from '@angular/router';
           }
         } 
         if(!duplicate) {
-          item.added = true;
-          this.selectedItems.push(item);
-          history.pushState(this.selectedItems, '', '');
-          this.router.navigate([item.routing], {state: history.state});
+          if(item.routing == "/confirmation") {
+            item.added = true;
+            this.selectedItems.push(item);
+            history.pushState(this.selectedItems, '', '');
+            this.router.navigate([item.routing], {state: history.state});
+          }
+          else {
+            this.router.navigate([item.routing], {state: history.state});
+          }
           return;
         }
       }
     }
 
     ngOnInit() {
-      console.log("Room Screen");
       if(history.state[0]) {
         for (let key in history.state) {
             if(history.state[key].name) {
                 this.selectedItems.push(history.state[key])
             }
         }
-        console.log(this.selectedItems);
       }
       
     }
