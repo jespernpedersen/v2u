@@ -102,7 +102,23 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
     }
 
     navigatetoStatus() {
-        this.router.navigateByUrl('/status');
+        // Empty request
+        let request = [];
+
+        // Data sent to database
+        this.list.forEach((item) => {
+            let itemArray = {
+                id: item.id,
+                name: item.name
+            }
+            request.push(itemArray);
+        });
+
+
+        console.log(request);
+
+        // Go to route
+        // this.router.navigateByUrl('/status');
     }
     addMore() {
         this.router.navigate(['/'], {state: this.list});
