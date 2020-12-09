@@ -17,49 +17,49 @@ import { Router } from '@angular/router';
         id: 0,
         icon: "local_fire_department",
         name: "Hot/Cold",
-        routing: "/temperature",
+        routing: "/home/temperature",
         added: false
       },
       {
         id: 1,
         icon: "dry",
         name: "Too smelly",
-        routing: "/confirmation",
+        routing: "/home/confirmation",
         added: false
       },
       {
         id: 2,
         icon: "toys",
         name: "Fresh air", 
-        routing: "/confirmation",
+        routing: "/home/confirmation",
         added: false
       },
       {
         id: 3,
         icon: "whatshot",
         name: "Too sweaty", 
-        routing: "/confirmation",
+        routing: "/home/confirmation",
         added: false
       },
       {
         id: 4,
         icon: "ac_unit",
         name: "Freezing", 
-        routing: "/confirmation",
+        routing: "/home/confirmation",
         added: false
       },
       {
         id: 5,
         icon: "waves",
         name: "Too windy", 
-        routing: "/confirmation",
+        routing: "/home/confirmation",
         added: false
       },
       {
         id: 6,
         icon: "invert_colors_off",
         name: "Humid/Dry", 
-        routing: "/humidity",
+        routing: "/home/humidity",
         added: false
       }
     ];
@@ -69,7 +69,7 @@ import { Router } from '@angular/router';
     addItem(item) {
       // If list is empty
       if(this.selectedItems.length == 0) {
-        if(item.routing == "/confirmation") {
+        if(item.routing == "/home/confirmation") {
           item.added = true;
           this.selectedItems.push(item);
           history.pushState(this.selectedItems, '', '');
@@ -89,7 +89,7 @@ import { Router } from '@angular/router';
           }
         } 
         if(!duplicate) {
-          if(item.routing == "/confirmation") {
+          if(item.routing == "/home/confirmation") {
             item.added = true;
             this.selectedItems.push(item);
             history.pushState(this.selectedItems, '', '');
@@ -105,7 +105,7 @@ import { Router } from '@angular/router';
 
     confirmSelection() {
       history.pushState(this.selectedItems, '', '');
-      this.router.navigate(['/confirmation'], {state: history.state}); 
+      this.router.navigate(['/home/confirmation'], {state: history.state}); 
     }
 
     ngOnInit() {

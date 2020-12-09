@@ -69,7 +69,7 @@ export class TemperatureComponent implements OnInit {
           };
           this.selectedList.push(itemArray);
           history.pushState(this.selectedList, '', '');
-          this.router.navigate(['/confirmation'], {state: history.state});
+          this.router.navigate(['/home/confirmation'], {state: history.state});
         }
         else if(this.selectedItem[0].id > 3) {
           let itemArray = {
@@ -80,7 +80,7 @@ export class TemperatureComponent implements OnInit {
           };
           this.selectedList.push(itemArray);
           history.pushState(this.selectedList, '', '');
-          this.router.navigate(['/confirmation'], {state: history.state});
+          this.router.navigate(['/home/confirmation'], {state: history.state});
         }
       }
 
