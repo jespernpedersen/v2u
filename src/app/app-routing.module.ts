@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AuthGuardGuard } from './Shared/Services/auth-guard.guard';
 
 
 // Login Routes
@@ -15,14 +16,16 @@ const routes: Routes = [
   { path: '', component: AppComponent,
     children: [
       {
-        path: '', component: DashboardComponent,
+        path: '', component: DashboardComponent, canActivate: [AuthGuardGuard],
         children: [
           { path: '', component: RoomFeelingsComponent, },
           { path: 'room', component: RoomFeelingsComponent, },
           { path: 'humidity', component: HumidityComponent, },
-          { path: 'login', component: LoginComponent, }
-
         ] },
+
+        {
+          path: 'login', component: LoginComponent
+        }
     ]
   },
 ];

@@ -12,13 +12,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Views
 import { RoomFeelingsModule } from './feelings/room/room.module';
-import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    LoginComponent
   ],
   imports: [
     CommonModule,
