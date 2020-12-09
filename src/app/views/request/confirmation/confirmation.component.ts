@@ -102,10 +102,10 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
     }
 
     navigatetoStatus() {
-        this.router.navigateByUrl('/status');
+        this.router.navigateByUrl('/home/status');
     }
     addMore() {
-        this.router.navigate(['/'], {state: this.list});
+        this.router.navigate(['/home'], {state: this.list});
     }
 
     removeItem(id) {

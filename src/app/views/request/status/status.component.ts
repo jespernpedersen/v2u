@@ -40,7 +40,7 @@ export class StatusComponent implements OnInit {
         }
         else {
             // If vote is finished, we redirect
-            this.router.navigateByUrl('/result');
+            this.router.navigateByUrl('/home/result');
         }
     }
 }

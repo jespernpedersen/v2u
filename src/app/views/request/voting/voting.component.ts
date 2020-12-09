@@ -151,7 +151,7 @@ export class VotingComponent implements AfterViewInit {
     }
 
     navigatetoStatus() {
-        this.router.navigateByUrl('/status');
+        this.router.navigateByUrl('/home/status');
     }
 
     // Pagination
