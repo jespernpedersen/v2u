@@ -1,0 +1,124 @@
+.app {
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(5, 117, 230) 0%, rgb(2, 27, 121) 100%);
+    margin-top: -1px;
+    padding-top: 1px;
+    /*required to avoid margin collapse*/
+    color: white;
+    position: relative;
+}
+
+.app.special {
+    background: white;
+    color: #021b79;
+}
+
+.app-container {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100%;
+}
+
+.app-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 53px);
+}
+
+
+/* Header */
+
+header {
+    margin-bottom: 10rem;
+}
+
+.brand-name {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+
+/* Login Form */
+
+form {
+    box-sizing: border-box;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+.mat-form-field .mat-input-element {
+    caret-color: #FFF;
+}
+
+mat-form-field {
+    display: block;
+    width: 100%;
+    caret-color: #FFF;
+}
+
+.submit-wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+button {
+    border-radius: 32px;
+    border: 0;
+    font-size: 17px;
+    padding: 10px 40px 12px 40px;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 10px;
+    color: rgb(2, 27, 121);
+    border-bottom: 3px solid grey;
+    cursor: pointer;
+}
+
+::ng-deep .mat-form-field .mat-input-element {
+    color: #FFF;
+}
+
+::ng-deep .mat-form-field .mat-form-field-label {
+    color: #FFF!important;
+    opacity: 0.4;
+    transition: 0.3s ease-in-out;
+}
+
+::ng-deep .mat-form-field .mat-form-field-underline {
+    background-color: #FFF;
+}
+
+::ng-deep .mat-form-field .mat-form-field-ripple {
+    background-color: #FFF;
+}
+
+::ng-deep .mat-form-field .mat-form-field-required-marker {
+    color: #FFF;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #FFF!important;
+    opacity: 1;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #FFF;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-required-marker {
+    color: #FFF;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-input-element {
+    color: #FFF;
+}

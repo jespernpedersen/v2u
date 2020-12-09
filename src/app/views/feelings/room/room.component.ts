@@ -104,7 +104,6 @@ import { Router } from '@angular/router';
     }
 
     confirmSelection() {
-     
       history.pushState(this.selectedItems, '', '');
       this.router.navigate(['/home/confirmation'], {state: history.state}); 
     }
