@@ -110,7 +110,6 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
     }
 
     navigatetoStatus() {
-<<<<<<< HEAD
         // Empty request
         let request = [];
 
@@ -136,9 +135,6 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
 
         // Go to route
         // this.router.navigateByUrl('/status');
-=======
-        this.router.navigateByUrl('/home/status');
->>>>>>> 430e01d70b282a61a3a674ca98003e6c40dd01b9
     }
     addMore() {
         this.router.navigate(['/home'], {state: this.list});
