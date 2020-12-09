@@ -1,0 +1,20 @@
+<h1>I feel</h1>
+<div class="list-wrapper">
+    <ul class="feeling-list" [ngClass]="{'only-one': list.length==1}">
+        <li *ngFor="let item of list" class="{{ item.status }}">
+            <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>
+            {{ item.name }}
+            <span class="item-remove" (click)="removeItem(item.id)">
+            <mat-icon aria-hidden="false" aria-label="Remove item">close</mat-icon>
+        </span>
+        </li>
+    </ul>
+
+    <div class="add-more">
+        <span (click)="addMore()">Add more</span>
+    </div>
+</div>
+<div class="confirm-selection" [ngClass]="{'active': isSwiping }">
+    <input type="range" value="0" class="pullee" />
+    <span class="component-text">Confirm</span>
+</div>

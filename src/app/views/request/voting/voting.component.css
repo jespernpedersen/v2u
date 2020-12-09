@@ -1,0 +1,333 @@
+:host {
+    width: 100%;
+    color: #0675e8;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #021b78;
+    font-size: 22px;
+    margin-bottom: 10rem;
+}
+
+ul.feeling-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+ul.feeling-list li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+}
+
+ul.feeling-list li {
+    right: -500px;
+    left: auto;
+}
+
+ul.feeling-list li.selected {
+    right: 0;
+    left: 50%;
+}
+
+ul.feeling-list li div {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #7cb7f1;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 1.5rem;
+    transform: scale(1.4);
+    text-align: center;
+    width: 40%;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    display: none;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    transition: 0.3s ease-in-out;
+    display: grid;
+}
+
+ul.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+ul.pagination li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #FFF;
+    border: 1px solid #0675e8;
+    text-indent: -9999px;
+    transition: 0.3s ease-in-out;
+}
+
+ul.pagination li.active {
+    background-color: #0675e8;
+    border-color: transparent;
+}
+
+ul.pagination li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+ul.feeling-list li div.item-wrapper.approved {
+    background-color: #cce6cb;
+    color: #008001;
+    transition: 0.3s ease-in-out;
+}
+
+ul.feeling-list li div.item-wrapper.denied {
+    background-color: #fecbd0;
+    color: #f90014;
+}
+
+.item-remove {
+    height: 18px;
+    width: 18px;
+    background-color: #021b78;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-remove .mat-icon {
+    font-size: 14px;
+}
+
+mat-icon {
+    display: inline-block;
+    font-size: 20px;
+    height: auto;
+    justify-self: start;
+    display: flex;
+}
+
+
+/* Slide to Confirm */
+
+.confirm-selection {
+    position: relative;
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.confirm-selection input {
+    position: relative;
+    z-index: 3;
+}
+
+.disagree,
+.agree {
+    position: absolute;
+    width: 46%;
+    top: 2px;
+    transform: translate(0, 0%);
+    font-size: 20px;
+    pointer-events: none;
+    height: calc(100% - 7px);
+    display: flex;
+    align-items: center;
+}
+
+.disagree span,
+.agree span {
+    margin-top: -2px;
+    display: block;
+}
+
+.disagree {
+    left: 2px;
+    right: auto;
+    text-align: left;
+    padding-left: 15px;
+    color: #f90014;
+    background-color: #d5b8a8;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.agree {
+    right: -2px;
+    left: auto;
+    text-align: right;
+    padding-right: 15px;
+    justify-content: flex-end;
+    align-items: right;
+    background-color: #cce6cb;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: #008102;
+}
+
+.pullee {
+    width: 100%;
+    appearance: none;
+    transform: scale(1);
+    background-color: transparent;
+}
+
+.pullee:active::-webkit-slider-thumb {
+    appearance: none;
+    transform: scale(1.1);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:active::-moz-range-thumb {
+    border: 0;
+    transform: scale(1.1);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:active::-ms-thumb {
+    transform: scale(1.3);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:focus {
+    outline: none;
+}
+
+.pullee::-webkit-slider-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #FFF;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    box-shadow: 0px 0px 14px #000;
+}
+
+.pullee::-moz-range-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.pullee::-ms-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.pullee::-webkit-slider-runnable-track {
+    height: 100%;
+    padding: 0rem;
+    box-sizing: content-box;
+    border-radius: 2rem;
+    background-color: transparent;
+}
+
+.pullee::-moz-range-track {
+    height: 1.3rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
+.pullee::-moz-focus-outer {
+    border: 0;
+}
+
+.pullee::-ms-track {
+    border: 0;
+    height: 1.3rem;
+    padding: 0rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: #7cb7f1;
+    color: transparent;
+}
+
+.pullee::-ms-fill-lower,
+.pullee::-ms-fill-upper {
+    background-color: transparent;
+}
+
+.pullee::-ms-tooltip {
+    display: none;
+}
+
+.status {
+    text-align: center;
+    margin-top: 2rem;
+    color: #021b78;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.status.active {
+    opacity: 1;
+}
+
+.status:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 5000ms infinite;
+    animation: ellipsis steps(4, end) 5000ms infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}

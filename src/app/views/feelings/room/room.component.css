@@ -11,7 +11,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 30px;
 }
 
 h1 {
@@ -21,11 +21,13 @@ h1 {
 .questions li {
     background-color: rgba(255, 255, 255, 0.15);
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 10px;
     border-radius: 14px;
-    font-size: 14px;
+    font-size: 18px;
     width: 100%;
     font-weight: 300;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .questions li:not(:last-of-type) {
@@ -35,5 +37,22 @@ h1 {
 mat-icon {
     display: inline-block;
     width: 100%;
-    font-size: 44px;
+    font-size: 60px;
+    line-height: normal;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.confirmation {
+    display: inline-block;
+    border-radius: 2.5rem;
+    border: 0;
+    background-image: none;
+    padding: 25px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #021b78;
+    margin-top: 3rem;
+    cursor: pointer;
 }

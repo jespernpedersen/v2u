@@ -2,22 +2,13 @@
     <div class="app-container">
         <header>
             <span class="brand-name">Vent2U</span>
-            <div class="zone">
+            <button type="button" routerLink="zones" class="zone">
                 Zone 2
-            </div>
+                <mat-icon aria-hidden="false" aria-label="Select choose">create</mat-icon>
+            </button>
         </header>
         <div class="app-content">
             <router-outlet></router-outlet>
         </div>
-        <!-- Placeholder Navigation -->
-        <nav>
-            <ul>
-                <li routerLink="">1. How</li>
-                <li routerLink="humidity">2. Humidity</li>
-                <li routerLink="temperature">3. Temperature</li>
-                <li>3. Confirm</li>
-                <li>4. Status</li>
-            </ul>
-        </nav>
     </div>
 </div>

@@ -4,27 +4,23 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Main Component
-import { HumidityComponent } from './humidity.component';
+import { ResultComponent } from './result.component';
 
-// Subcomponents
+// Material Design
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
-
-import { GoBackModule } from '../../../shared/_components/GoBack/goback.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
-    HumidityComponent
+    ResultComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule,
-    GoBackModule
+    MatProgressSpinnerModule
   ],
   providers: [],
   exports: []
 })
-export class HumidityModule { }
+export class ResultModule { }
