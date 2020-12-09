@@ -1,25 +1,33 @@
-<div>
-    <p>Login to get access to change the temperature</p>
+<div class="app">
+    <div class="app-container">
+        <div class="app-content">
+            <header class="brand">
+                <span class="brand-name">Vent2U</span>
+            </header>
+            <p>Login</p>
 
-    <form class="login-form" [formGroup]="LoginForm" (ngSubmit)="Login()">
-        <mat-form-field>
-            <input matInput placeholder="Email" formControlName="email" [(ngModel)]="email">
-        </mat-form-field>
-            <mat-error *ngIf="LoginForm.controls.email.touched && LoginForm.controls.email.errors?.pattern">
-                Please input a valid email
-            </mat-error>
+            <form class="login-form" [formGroup]="LoginForm" (ngSubmit)="Login()">
+                <mat-form-field>
+                    <input matInput placeholder="Enter your email" formControlName="email" [(ngModel)]="email">
+                </mat-form-field>
+                <mat-error *ngIf="LoginForm.controls.email.touched && LoginForm.controls.email.errors?.pattern">
+                    Please input a valid email
+                </mat-error>
 
-            <mat-error *ngIf="LoginForm.controls.email.touched && LoginForm.controls.email.errors?.required">
-                Something is wrong, try again
-            </mat-error>
+                <mat-error *ngIf="LoginForm.controls.email.touched && LoginForm.controls.email.errors?.required">
+                    Something is wrong, try again
+                </mat-error>
 
-        <mat-form-field>
-            <input matInput type="password" placeholder="Password" formControlName="password" [(ngModel)]="password">
-        </mat-form-field>
-            <mat-error *ngIf= "LoginForm.controls.password.touched && LoginForm.controls.password.errors?.required">
-                Please input a valid password
-            </mat-error>
-        <button type="submit" mat-button color="primary">Login</button>
-    </form>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Enter your password" formControlName="password" [(ngModel)]="password">
+                </mat-form-field>
+                <mat-error *ngIf="LoginForm.controls.password.touched && LoginForm.controls.password.errors?.required">
+                    Please input a valid password
+                </mat-error>
+                <div class="submit-wrapper">
+                    <button type="submit" mat-button color="primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-
