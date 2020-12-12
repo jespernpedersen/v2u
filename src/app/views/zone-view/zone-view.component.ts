@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 import { VentsService } from '../../services/vents.service';
 import { Vent } from '../../models/vent.model';
 import { RoomsService } from 'src/app/services/rooms.service';
@@ -28,7 +28,7 @@ export class ZoneViewComponent implements OnInit {
   vents;
   vent;
 
-  constructor(private _ventsService: VentsService, private _roomsService: RoomsService, private _usersService: UsersService, private _location: Location) { }
+  constructor(private _ventsService: VentsService, private _roomsService: RoomsService, private _usersService: UsersService, private _router: Router) { }
 
   @Output() claimEvent = new EventEmitter();
 
@@ -62,7 +62,8 @@ export class ZoneViewComponent implements OnInit {
 
         this._usersService.update(user).subscribe( data => {
           this.claimEvent.emit(this.vent);
-          this._location.back();
+
+          this._router.navigateByUrl("/home");
         });
 
       });
@@ -71,8 +72,8 @@ export class ZoneViewComponent implements OnInit {
       let user = {ID: this.userId, vent_id: this.vent.ID}
       this._usersService.update(user).subscribe( data => {
           this.claimEvent.emit(this.vent);
-          this._location.back();
 
+          this._router.navigateByUrl("/home");
       });
     }
     
