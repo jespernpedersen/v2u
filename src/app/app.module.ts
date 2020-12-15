@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { GameModule } from './views/game/game.module';
 
 
 @NgModule({
@@ -27,8 +28,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     HttpClientModule,
     MatFormFieldModule, 
     MatInputModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    GameModule
     ],
   providers: [LoginService],
 

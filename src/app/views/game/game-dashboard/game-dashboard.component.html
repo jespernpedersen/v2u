@@ -1,0 +1,23 @@
+<div class="app">
+  <header>
+    <span class="brand-name">Vent2U</span>
+    <h2>Can you fix it?</h2>
+    <button type="button" routerLink="zones" class="level">
+      Level {{level}}
+  </button>
+  </header>
+    <div class="container">
+      <mat-card *ngIf="isInChallenge">
+        <mat-card-title [innerHTML]="tip"></mat-card-title>
+        <game-slider (onValueChanged)="SetAnswer($event)" [unit]="slider.unit" [range]="slider.range" *ngFor="let slider of game[level-1].sliders"></game-slider>
+      </mat-card>
+
+      <mat-card *ngIf="!isInChallenge">
+        <mat-card-title>Great Job!</mat-card-title>
+        <p>Humans feel most comfortable in temperatures between 20°C and 23°C</p>
+      </mat-card>
+
+      <button *ngIf="isInChallenge" (click)="CheckAnswer()" mat-flat-button type="button">Confirm</button>
+      <button *ngIf="!isInChallenge" mat-flat-button type="button" routerLink="/home">Return to Dashboard</button>
+    </div>
+</div>

@@ -17,20 +17,22 @@ import { ConfirmationComponent } from './views/request/confirmation/confirmation
 import { StatusComponent } from './views/request/status/status.component';
 import { VotingComponent } from './views/request/voting/voting.component';
 import { ResultComponent } from './views/request/result/result.component';
+import { GameStartComponent } from './views/game/game-start/game-start.component';
+import { GameDashboardComponent } from './views/game/game-dashboard/game-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
     children: [
       { path: '', component: ZoneViewComponent},
       {
-        path: 'home', component: DashboardComponent, canActivate: [AuthGuardGuard],
+        path: 'home', component: DashboardComponent,
 
         children: [
-          { path: '', component: RoomFeelingsComponent, },
+          { path: '', component: RoomFeelingsComponent, canActivate: [AuthGuardGuard]},
           // Feelings Routes
-          { path: 'room', component: RoomFeelingsComponent, },
-          { path: 'humidity', component: HumidityComponent, },
-          { path: 'temperature', component: TemperatureComponent, },
+          { path: 'room', component: RoomFeelingsComponent, canActivate: [AuthGuardGuard] },
+          { path: 'humidity', component: HumidityComponent, canActivate: [AuthGuardGuard] },
+          { path: 'temperature', component: TemperatureComponent, canActivate: [AuthGuardGuard] },
           
           // Request Routes
           { path: 'confirmation', component: ConfirmationComponent, canActivate: [AuthGuardGuard] },
@@ -39,7 +41,9 @@ const routes: Routes = [
           { path: 'result', component: ResultComponent, canActivate: [AuthGuardGuard] },
         ]},
           { path: 'zones', component: ZoneViewComponent, canActivate: [AuthGuardGuard] },
-          { path: 'login', component: LoginComponent}
+          { path: 'login', component: LoginComponent},
+          { path: 'game', component: GameStartComponent},
+          { path: 'game/level/:id', component: GameDashboardComponent },
         ] },
     ];
 

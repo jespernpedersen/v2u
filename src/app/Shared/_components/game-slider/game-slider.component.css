@@ -1,0 +1,74 @@
+.display{
+    border: 1px solid gray;
+    border-radius: 100%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.33);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+p{
+    font-size: 3em;
+    color: #0575e6;
+}
+
+.display::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    border-radius: 100%;
+    border: 3px solid rgb(5, 117, 230);
+}
+
+.mat-slider-horizontal{
+    width: 100%;
+}
+
+::ng-deep .mat-slider-horizontal .mat-slider-wrapper{
+    height: 5px!important;
+}
+
+::ng-deep .mat-slider-horizontal .mat-slider-track-wrapper,
+::ng-deep .mat-slider-horizontal .mat-slider-track-fill,
+::ng-deep .mat-slider-horizontal .mat-slider-track-background{
+    height: 100%!important;
+}
+
+
+::ng-deep.mat-accent .mat-slider-track-fill{
+    background-color: transparent;
+}
+
+::ng-deep .mat-slider-horizontal .mat-slider-wrapper{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(171,1,23,1) 100%);
+}
+::ng-deep .mat-slider-track-background {
+    background-color: transparent!important;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.56);
+    right: -19px;
+    bottom: -18px;
+}
+
+::ng-deep .mat-slider-thumb-container{
+    height: 12px;
+    top: 0;
+}
+
+::ng-deep .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb{
+    background-color: white;
+}
