@@ -1,15 +1,23 @@
 import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+// Backend Service
+import { ChangeRequestService } from '../../../shared/_services/changerequest.service'
   
 @Component({
     selector: 'view-confirmation',
     templateUrl: './confirmation.component.html',
     styleUrls: ['confirmation.component.css'],
+    providers: [ChangeRequestService]
 })
   
 export class ConfirmationComponent implements AfterViewInit, OnInit {
-    constructor(private router: Router) {}
+    constructor(
+        private _changeRequest: ChangeRequestService,
+        private router: Router
+    ) 
+    {}
 
     // List
     list = [];
@@ -102,7 +110,31 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
     }
 
     navigatetoStatus() {
-        this.router.navigateByUrl('/home/status');
+        // Empty request
+        let request = [];
+
+        // Data sent to database
+        this.list.forEach((item) => {
+            let itemArray = {
+                id: item.id,
+                name: item.name
+            }
+            request.push(itemArray);
+        });
+
+        // Send Create Request to Backend
+        this._changeRequest.post(request).subscribe(
+            response => {
+                console.log(response);
+            },
+            error => {
+                console.log("Error: ")
+                console.log(error);
+            });
+        // console.log(request);
+
+        // Go to route
+        // this.router.navigateByUrl('/status');
     }
     addMore() {
         this.router.navigate(['/home'], {state: this.list});
