@@ -1,3 +1,4 @@
+<div class="content">
 <h1 [ngClass]="{'applying': !showReturn }">{{ title }}</h1>
 <div class="completed" [ngClass]="{'active': showReturn }">
     <span><mat-icon>done</mat-icon></span>
@@ -18,4 +19,5 @@
 <div class="return" [ngClass]="{'active': showReturn }">
     <button routerLink="/home">
         <mat-icon aria-hidden="false" aria-label="Go home">home</mat-icon>Return</button>
+</div>
 </div>

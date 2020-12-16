@@ -8,6 +8,8 @@ import { ConfirmationComponent } from './confirmation.component';
 
 // Subcomponents
 import { MatIconModule } from '@angular/material/icon';
+import { GoBackComponent } from 'src/app/shared/_components/GoBack/goback.component';
+import { GoBackModule } from 'src/app/shared/_components/GoBack/goback.module';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    GoBackModule
   ],
   providers: [],
   exports: [
