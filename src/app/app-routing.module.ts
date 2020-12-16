@@ -28,19 +28,19 @@ const routes: Routes = [
         path: 'home', component: DashboardComponent,
 
         children: [
-          { path: '', component: RoomFeelingsComponent, canActivate: [AuthGuardGuard]},
+          { path: '', component: RoomFeelingsComponent},
           // Feelings Routes
-          { path: 'room', component: RoomFeelingsComponent, canActivate: [AuthGuardGuard] },
-          { path: 'humidity', component: HumidityComponent, canActivate: [AuthGuardGuard] },
-          { path: 'temperature', component: TemperatureComponent, canActivate: [AuthGuardGuard] },
+          { path: 'room', component: RoomFeelingsComponent },
+          { path: 'humidity', component: HumidityComponent },
+          { path: 'temperature', component: TemperatureComponent },
           
           // Request Routes
-          { path: 'confirmation', component: ConfirmationComponent, canActivate: [AuthGuardGuard] },
-          { path: 'status', component: StatusComponent, canActivate: [AuthGuardGuard] },
-          { path: 'voting', component: VotingComponent, canActivate: [AuthGuardGuard] },
-          { path: 'result', component: ResultComponent, canActivate: [AuthGuardGuard] },
+          { path: 'confirmation', component: ConfirmationComponent },
+          { path: 'status', component: StatusComponent},
+          { path: 'voting', component: VotingComponent },
+          { path: 'result', component: ResultComponent },
         ]},
-          { path: 'zones', component: ZoneViewComponent, canActivate: [AuthGuardGuard] },
+          { path: 'zones', component: ZoneViewComponent },
           { path: 'login', component: LoginComponent},
           { path: 'game', component: GameStartComponent},
           { path: 'game/level/:id', component: GameDashboardComponent },
