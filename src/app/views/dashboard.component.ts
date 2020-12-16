@@ -32,16 +32,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.url = event.url;
 
       switch(event.url) {
-        case "/":
-        case "/temperature":
-          this.removeSpecial();
-          break;
-        case "/confirmation":
-        case "/status": 
-        case "/voting":
-        case "/result": 
+        case "/home/confirmation":
+        case "/home/status": 
+        case "/home/voting":
+        case "/home/result": 
           this.addSpecial();
-        default: break;
+          break;
+        default: 
+          this.removeSpecial();
+        break;
       }
     }
   }
