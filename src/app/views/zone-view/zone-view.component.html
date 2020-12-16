@@ -1,4 +1,4 @@
-<button type="button" class="close" routerLink=""><mat-icon aria-hidden="false" aria-label="Close Icon">close</mat-icon></button>
+<button type="button" class="close" routerLink="/home"><mat-icon aria-hidden="false" aria-label="Close Icon">close</mat-icon></button>
 <h2 *ngIf="room">Room {{room.name}}</h2>
 <h2>Climate Zones</h2>
 <zone-grid *ngIf="vents && userId" [currentVentId]="currentVent.ID" (onVentUnclaimed)="unclaimVent($event)" (onVentClaimed)="claimVent($event)" [room]='room' [vents]='vents'></zone-grid>

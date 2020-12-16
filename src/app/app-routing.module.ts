@@ -17,29 +17,33 @@ import { ConfirmationComponent } from './views/request/confirmation/confirmation
 import { StatusComponent } from './views/request/status/status.component';
 import { VotingComponent } from './views/request/voting/voting.component';
 import { ResultComponent } from './views/request/result/result.component';
+import { GameStartComponent } from './views/game/game-start/game-start.component';
+import { GameDashboardComponent } from './views/game/game-dashboard/game-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
     children: [
       { path: '', component: ZoneViewComponent},
       {
-        path: 'home', component: DashboardComponent, canActivate: [AuthGuardGuard],
+        path: 'home', component: DashboardComponent,
 
         children: [
-          { path: '', component: RoomFeelingsComponent, },
+          { path: '', component: RoomFeelingsComponent},
           // Feelings Routes
-          { path: 'room', component: RoomFeelingsComponent, },
-          { path: 'humidity', component: HumidityComponent, },
-          { path: 'temperature', component: TemperatureComponent, },
+          { path: 'room', component: RoomFeelingsComponent },
+          { path: 'humidity', component: HumidityComponent },
+          { path: 'temperature', component: TemperatureComponent },
           
           // Request Routes
-          { path: 'confirmation', component: ConfirmationComponent, canActivate: [AuthGuardGuard] },
-          { path: 'status', component: StatusComponent, canActivate: [AuthGuardGuard] },
-          { path: 'voting', component: VotingComponent, canActivate: [AuthGuardGuard] },
-          { path: 'result', component: ResultComponent, canActivate: [AuthGuardGuard] },
+          { path: 'confirmation', component: ConfirmationComponent },
+          { path: 'status', component: StatusComponent},
+          { path: 'voting', component: VotingComponent },
+          { path: 'result', component: ResultComponent },
         ]},
-          { path: 'zones', component: ZoneViewComponent, canActivate: [AuthGuardGuard] },
-          { path: 'login', component: LoginComponent}
+          { path: 'zones', component: ZoneViewComponent },
+          { path: 'login', component: LoginComponent},
+          { path: 'game', component: GameStartComponent},
+          { path: 'game/level/:id', component: GameDashboardComponent },
         ] },
     ];
 

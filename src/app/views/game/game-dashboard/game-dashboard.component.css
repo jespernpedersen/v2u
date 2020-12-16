@@ -1,0 +1,86 @@
+body{
+    font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app {
+    height: 100vh;
+    background: #fdfdfd;
+    margin-top: -1px;
+    padding-top: 1px;
+    /*required to avoid margin collapse*/
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.app::before{
+    content: '';
+    width: 200vw;
+    height: 100vw;
+    left: -50vw;
+    position: fixed;
+    background-color: rgb(5, 117, 230);
+    border-radius: 100%;
+    top: -76vw;
+}
+
+.container{
+    margin: 0 15px;
+    margin-top: 25px;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    background-color: rgb(5, 117, 230);
+    color: white;
+    margin-top: 50px;
+}
+
+.brand-name {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+ }
+
+ h2{
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 45px;
+ }
+
+ header{
+     height: 80px;
+     margin-bottom: 10px;
+ }
+
+ mat-card-title{
+     color: rgb(2, 27, 121);
+     margin-top: 40px!important;
+ }
+
+ .level{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 0 0 20px;
+    padding: 7px 15px;
+    color: white;
+    border: none;
+    font-size: 0.9em;
+    position: fixed;
+    right: 0;
+    top: 15px;
+    margin-top: 0;
+ }
+
+ .blue{
+    color: rgb(5, 117, 230);
+ }
+
+ .red {
+    color: rgb(171,1,23);
+ }

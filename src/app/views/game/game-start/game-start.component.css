@@ -1,0 +1,44 @@
+body{
+    font: 400 24px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app {
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(5, 117, 230) 0%, rgb(2, 27, 121) 100%);
+    margin-top: -1px;
+    padding-top: 1px;
+    /*required to avoid margin collapse*/
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.container{
+    margin: 0 15px;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: rgb(2, 27, 121);
+    margin-top: 50px;
+}
+
+h2{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.brand-name {
+   position: absolute;
+   left: 15px;
+   top: 15px;
+   font-family: 'Work Sans', sans-serif;
+   font-size: 20px;
+   font-weight: 300;
+}
+
+p{
+    font-size: 1.2em;
+    font-weight: 300;
+}

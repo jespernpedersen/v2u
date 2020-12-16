@@ -1,0 +1,4 @@
+<div class="display">
+    <p>{{currentValue}}{{unit}}</p>
+</div>
+<mat-slider [value]="currentValue" (input)="currentValue = $event.value; ValueChanged();" [min]="range.min" [max]="range.max" step="1" value="currentValue"></mat-slider>
