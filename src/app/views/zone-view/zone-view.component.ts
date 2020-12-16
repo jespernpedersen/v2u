@@ -68,7 +68,6 @@ export class ZoneViewComponent implements OnInit {
 
       });
     } else {
-      debugger;
       let user = {ID: this.userId, vent_id: this.vent.ID}
       this._usersService.update(user).subscribe( data => {
           this.claimEvent.emit(this.vent);
@@ -84,7 +83,6 @@ export class ZoneViewComponent implements OnInit {
     let user = {ID: this.userId, vent_id: null};
 
     this._usersService.update(user).subscribe( data => {
-      debugger;
       this.claimEvent.emit(this.currentVent);//update dashboard
       this.vents.find(vent => vent.ID == this.currentVent.ID).user_count -= 1;
       this.currentVent = new Vent();

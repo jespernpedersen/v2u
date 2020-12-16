@@ -131,10 +131,9 @@ export class ConfirmationComponent implements AfterViewInit, OnInit {
                 console.log("Error: ")
                 console.log(error);
             });
-        // console.log(request);
 
         // Go to route
-        // this.router.navigateByUrl('/status');
+        this.router.navigateByUrl('/home/status');
     }
     addMore() {
         this.router.navigate(['/home'], {state: this.list});
