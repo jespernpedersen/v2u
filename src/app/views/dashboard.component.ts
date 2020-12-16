@@ -33,13 +33,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
       switch(event.url) {
         case "/":
-        case "/temperature":
+        case "/home/temperature":
+        case "/home":
           this.removeSpecial();
           break;
-        case "/confirmation":
-        case "/status": 
-        case "/voting":
-        case "/result": 
+        case "/home/confirmation":
+        case "/home/status": 
+        case "/home/voting":
+        case "/home/result": 
           this.addSpecial();
         default: break;
       }
