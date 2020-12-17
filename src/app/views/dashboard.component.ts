@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { PATH } from '../services/config';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -25,7 +27,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   
   public setSpecial(event) {
     if(event instanceof NavigationEnd || event instanceof Router) {
-      if(event.url == this.url) return;
+      if( event.url == this.url ) return;
 
       this.page = document.querySelector(".app");
 

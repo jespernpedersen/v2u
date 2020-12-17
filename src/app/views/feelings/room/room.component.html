@@ -6,8 +6,10 @@
             {{ item.name }}
         </li>
     </ul>
-    <div class="confirmation" *ngIf="selectedItems.length > 0" (click)="confirmSelection()">
-        I am satisfied with my choices
+    <div class="cancelButton">
+        <div class="confirmation" *ngIf="selectedItems.length > 0"  (click)="confirmSelection()">
+            Return
+        </div>
     </div>
 </div>
 

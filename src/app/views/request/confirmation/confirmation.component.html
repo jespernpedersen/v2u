@@ -1,5 +1,5 @@
 <div class="content">
-    <h1>I feel</h1>
+    <h1>The room feels</h1>
     <div class="list-wrapper">
         <ul class="feeling-list" [ngClass]="{'only-one': list.length==1}">
             <li *ngFor="let item of list" class="{{ item.status }}">
@@ -21,5 +21,5 @@
             <span class="component-text">Confirm</span>
         </div>
     </div>
-    <goback></goback>
+    <goback location="/home" text="Cancel"></goback>
 </div>

@@ -6,10 +6,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./game-dashboard.component.css']
 })
 export class GameDashboardComponent implements OnInit {
-
-  @ViewChild('gameCard') gameCard : ElementRef;
-  @ViewChild('learnCard') learnCard : ElementRef;
-
+    
   level = 1;
   answer = 0;
   isInChallenge = true;
@@ -62,15 +59,27 @@ export class GameDashboardComponent implements OnInit {
     let card = document.querySelector("#gameCard");
     card.classList.add("animate__animated", "animate__shakeX", "animate__fast");
     this.showTip = false;
-    card.addEventListener('animationend', () => {
+    card.addEventListener('animationend', (e) => {
+      e.stopPropagation();
       card.classList.remove("animate__animated", "animate__shakeX", "animate__fast");
-      this.tip = tip;
+      this.changeTip(tip);
       this.showTip = true;
     });
 
   }
 
+  changeTip(text){
+    let tipEl = document.querySelector("#tip");
+    this.tip = text;
+    tipEl.classList.add("animate__animated", "animate__flipInX", "animate__fast");
+    tipEl.addEventListener('animationend', (e) => {
+      e.stopPropagation();
+      tipEl.classList.remove("animate__animated", "animate__flipInX", "animate__fast");
+    });
+  }
+
   NextLevel(){
+    this.changeTip("It's perfect!");
     let card = document.querySelector("#gameCard");
     card.classList.add("animate__animated", "animate__pulse", "animate__faster");
     card.addEventListener('animationend', () => {
