@@ -1,4 +1,4 @@
-.room{
+.room {
     padding-top: 60px;
     height: 100vh;
 }
@@ -23,11 +23,13 @@ h1 {
     font-weight: 300;
 }
 
-.questions{
+.questions {
     max-height: 75vh;
     overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .questions::-webkit-scrollbar {
@@ -46,6 +48,11 @@ h1 {
     cursor: pointer;
 }
 
+.questions li.selected {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 .questions li:not(:last-of-type) {
     margin-bottom: 15px;
 }
@@ -60,21 +67,27 @@ mat-icon {
     font-size: 2em;
 }
 
+.confirmation-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
 .confirmation {
     display: inline-block;
     border-radius: 2.5rem;
     border: 0;
     background-image: none;
-    padding: 25px 50px;
+    padding: 25px 30px;
     font-size: 15px;
     font-weight: 600;
     color: #FFF;
     background-color: #021b78;
     margin-top: 3rem;
     cursor: pointer;
+    text-align: center;
 }
 
-.game{
+.game {
     position: fixed;
     bottom: 0;
     right: 0;

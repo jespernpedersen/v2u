@@ -1,13 +1,17 @@
 <div class="room">
     <h1>How does the room feel?</h1>
     <ul class="questions">
-        <li *ngFor="let item of list" (click)="addItem(item)" [state]="item">
-            <mat-icon aria-hidden="false" aria-label="Icon for {{ item.name }}">{{ item.icon }}</mat-icon>
-            {{ item.name }}
+        <li *ngFor="let item of list" (click)="addItem(item)" [state]="item" [className]="item.added ? 'selected' : ''">
+            <div class="item-wrapper">
+                <mat-icon aria-hidden="false" aria-label="Icon for {{ item.name }}">{{ item.icon }}</mat-icon>
+                {{ item.name }}
+            </div>
         </li>
     </ul>
-    <div class="confirmation" *ngIf="selectedItems.length > 0" (click)="confirmSelection()">
-        I am satisfied with my choices
+    <div class="confirmation-wrapper" *ngIf="selectedItems.length > 0">
+        <div class="confirmation" (click)="confirmSelection()">
+            I am satisfied with my choices
+        </div>
     </div>
 </div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { element } from 'protractor';
   
   @Component({
     selector: 'view-room-feelings',
@@ -82,12 +83,6 @@ import { Router } from '@angular/router';
       // If list has already has items
       else {
         let duplicate;
-        for (let key in this.selectedItems) {
-          if(this.selectedItems[key].id == item.id) {
-            duplicate = true;
-            alert("You've already added this item");
-          }
-        } 
         if(!duplicate) {
           if(item.routing == "/home/confirmation") {
             item.added = true;
@@ -111,6 +106,12 @@ import { Router } from '@angular/router';
     ngOnInit() {
       if(history.state[0]) {
         for (let key in history.state) {
+            if(history.state[key].id) {
+              let filter = this.list.filter((list) => {
+                return list.id === history.state[key].id;
+              })
+              filter[0].added = true;
+            }
             if(history.state[key].name) {
                 this.selectedItems.push(history.state[key])
             }
