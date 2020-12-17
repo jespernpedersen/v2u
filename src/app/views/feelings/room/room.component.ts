@@ -30,14 +30,14 @@ import { Router } from '@angular/router';
       {
         id: 2,
         icon: "toys",
-        name: "Fresh air", 
+        name: "Needs fresh air", 
         routing: "/home/confirmation",
         added: false
       },
       {
         id: 3,
         icon: "whatshot",
-        name: "Too sweaty", 
+        name: "Makes me too sweaty", 
         routing: "/home/confirmation",
         added: false
       },
@@ -53,13 +53,6 @@ import { Router } from '@angular/router';
         icon: "waves",
         name: "Too windy", 
         routing: "/home/confirmation",
-        added: false
-      },
-      {
-        id: 6,
-        icon: "invert_colors_off",
-        name: "Humid/Dry", 
-        routing: "/home/humidity",
         added: false
       }
     ];
@@ -82,12 +75,6 @@ import { Router } from '@angular/router';
       // If list has already has items
       else {
         let duplicate;
-        for (let key in this.selectedItems) {
-          if(this.selectedItems[key].id == item.id) {
-            duplicate = true;
-            alert("You've already added this item");
-          }
-        } 
         if(!duplicate) {
           if(item.routing == "/home/confirmation") {
             item.added = true;
@@ -111,6 +98,12 @@ import { Router } from '@angular/router';
     ngOnInit() {
       if(history.state[0]) {
         for (let key in history.state) {
+            if(history.state[key].id) {
+              let filter = this.list.filter((list) => {
+                return list.id === history.state[key].id;
+              })
+              filter[0].added = true;
+            }
             if(history.state[key].name) {
                 this.selectedItems.push(history.state[key])
             }

@@ -1,5 +1,5 @@
-.room{
-    padding-top: 60px;
+.room {
+    padding-top: 15vh;
     height: 100vh;
 }
 
@@ -15,7 +15,8 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
-    max-width: 260px;
+    grid-row-gap: 15px;
+    max-width: 280px;
     margin: auto;
 }
 
@@ -23,11 +24,13 @@ h1 {
     font-weight: 300;
 }
 
-.questions{
+.questions {
     max-height: 75vh;
     overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .questions::-webkit-scrollbar {
@@ -37,17 +40,23 @@ h1 {
 .questions li {
     background-color: rgba(255, 255, 255, 0.15);
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
     border-radius: 14px;
-    font-size: 18px;
+    font-size: 17px;
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
     cursor: pointer;
+    min-height: 140px;
 }
 
-.questions li:not(:last-of-type) {
-    margin-bottom: 15px;
+.questions li mat-icon {
+    font-size: 50px;
+}
+
+.questions li.selected {
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 mat-icon {
@@ -60,21 +69,27 @@ mat-icon {
     font-size: 2em;
 }
 
+.confirmation-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
 .confirmation {
     display: inline-block;
     border-radius: 2.5rem;
     border: 0;
     background-image: none;
-    padding: 25px 50px;
+    padding: 25px 30px;
     font-size: 15px;
     font-weight: 600;
     color: #FFF;
     background-color: #021b78;
     margin-top: 3rem;
     cursor: pointer;
+    text-align: center;
 }
 
-.game{
+.game {
     position: fixed;
     bottom: 0;
     right: 0;

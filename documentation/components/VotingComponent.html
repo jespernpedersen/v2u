@@ -1,0 +1,1659 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>vent2u documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">vent2u documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>VotingComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/request/voting/voting.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>view-voting</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>voting.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./voting.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currValue">currValue</a>
+                            </li>
+                            <li>
+                                <a href="#inputRange">inputRange</a>
+                            </li>
+                            <li>
+                                <a href="#isActive">isActive</a>
+                            </li>
+                            <li>
+                                <a href="#isCompleted">isCompleted</a>
+                            </li>
+                            <li>
+                                <a href="#list">list</a>
+                            </li>
+                            <li>
+                                <a href="#maxValue">maxValue</a>
+                            </li>
+                            <li>
+                                <a href="#rafID">rafID</a>
+                            </li>
+                            <li>
+                                <a href="#speed">speed</a>
+                            </li>
+                            <li>
+                                <a href="#transition">transition</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addEventListeners">addEventListeners</a>
+                            </li>
+                            <li>
+                                <a href="#agreeHandler">agreeHandler</a>
+                            </li>
+                            <li>
+                                <a href="#animateHandlerMinus">animateHandlerMinus</a>
+                            </li>
+                            <li>
+                                <a href="#animateHandlerPlus">animateHandlerPlus</a>
+                            </li>
+                            <li>
+                                <a href="#confirmEndHandler">confirmEndHandler</a>
+                            </li>
+                            <li>
+                                <a href="#confirmStartHandler">confirmStartHandler</a>
+                            </li>
+                            <li>
+                                <a href="#disagreeHandler">disagreeHandler</a>
+                            </li>
+                            <li>
+                                <a href="#findCurrentItem">findCurrentItem</a>
+                            </li>
+                            <li>
+                                <a href="#navigatetoStatus">navigatetoStatus</a>
+                            </li>
+                            <li>
+                                <a href="#nextItem">nextItem</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/views/request/voting/voting.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addEventListeners"></a>
+                    <span class="name">
+                        <b>
+                            addEventListeners
+                        </b>
+                        <a href="#addEventListeners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addEventListeners()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="agreeHandler"></a>
+                    <span class="name">
+                        <b>
+                            agreeHandler
+                        </b>
+                        <a href="#agreeHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>agreeHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="animateHandlerMinus"></a>
+                    <span class="name">
+                        <b>
+                            animateHandlerMinus
+                        </b>
+                        <a href="#animateHandlerMinus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>animateHandlerMinus()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="animateHandlerPlus"></a>
+                    <span class="name">
+                        <b>
+                            animateHandlerPlus
+                        </b>
+                        <a href="#animateHandlerPlus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>animateHandlerPlus()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmEndHandler"></a>
+                    <span class="name">
+                        <b>
+                            confirmEndHandler
+                        </b>
+                        <a href="#confirmEndHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmEndHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmStartHandler"></a>
+                    <span class="name">
+                        <b>
+                            confirmStartHandler
+                        </b>
+                        <a href="#confirmStartHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmStartHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disagreeHandler"></a>
+                    <span class="name">
+                        <b>
+                            disagreeHandler
+                        </b>
+                        <a href="#disagreeHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>disagreeHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findCurrentItem"></a>
+                    <span class="name">
+                        <b>
+                            findCurrentItem
+                        </b>
+                        <a href="#findCurrentItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findCurrentItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigatetoStatus"></a>
+                    <span class="name">
+                        <b>
+                            navigatetoStatus
+                        </b>
+                        <a href="#navigatetoStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>navigatetoStatus()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextItem"></a>
+                    <span class="name">
+                        <b>
+                            nextItem
+                        </b>
+                        <a href="#nextItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nextItem(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/views/request/voting/voting.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currValue"></a>
+                        <span class="name">
+                            <b>
+                            currValue</b>
+                            <a href="#currValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>12</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/views/request/voting/voting.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inputRange"></a>
+                        <span class="name">
+                            <b>
+                            inputRange</b>
+                            <a href="#inputRange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/views/request/voting/voting.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isActive"></a>
+                        <span class="name">
+                            <b>
+                            isActive</b>
+                            <a href="#isActive"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/views/request/voting/voting.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isCompleted"></a>
+                        <span class="name">
+                            <b>
+                            isCompleted</b>
+                            <a href="#isCompleted"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/views/request/voting/voting.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="list"></a>
+                        <span class="name">
+                            <b>
+                            list</b>
+                            <a href="#list"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+        {
+            id: 0,
+            icon: &quot;local_fire_department&quot;,
+            name: &quot;Hot/Cold&quot;,
+            status: &quot;&quot;,
+            selected: true
+        },
+        {
+            id: 1,
+            icon: &quot;dry&quot;,
+            name: &quot;Too smelly&quot;,
+            status: &quot;&quot;,
+            selected: false
+        }
+    ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/views/request/voting/voting.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="maxValue"></a>
+                        <span class="name">
+                            <b>
+                            maxValue</b>
+                            <a href="#maxValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>100</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/views/request/voting/voting.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rafID"></a>
+                        <span class="name">
+                            <b>
+                            rafID</b>
+                            <a href="#rafID"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/views/request/voting/voting.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="speed"></a>
+                        <span class="name">
+                            <b>
+                            speed</b>
+                            <a href="#speed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>2</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/views/request/voting/voting.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transition"></a>
+                        <span class="name">
+                            <b>
+                            transition</b>
+                            <a href="#transition"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>3000</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/views/request/voting/voting.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+  
+@Component({
+    selector: &#x27;view-voting&#x27;,
+    templateUrl: &#x27;./voting.component.html&#x27;,
+    styleUrls: [&#x27;voting.component.css&#x27;],
+})
+  
+export class VotingComponent implements AfterViewInit {
+    constructor(private router: Router) {}
+
+    // Voting Slider
+    inputRange;
+    maxValue &#x3D; 100;
+    speed &#x3D; 2;
+    currValue &#x3D; 12;
+    rafID;
+    isActive &#x3D; false;
+
+    // Pagination Settings
+    transition &#x3D; 3000;
+    isCompleted &#x3D; false;
+
+    // List
+    list &#x3D; [
+        {
+            id: 0,
+            icon: &quot;local_fire_department&quot;,
+            name: &quot;Hot/Cold&quot;,
+            status: &quot;&quot;,
+            selected: true
+        },
+        {
+            id: 1,
+            icon: &quot;dry&quot;,
+            name: &quot;Too smelly&quot;,
+            status: &quot;&quot;,
+            selected: false
+        }
+    ];
+
+    ngAfterViewInit() {
+        this.inputRange &#x3D; document.getElementsByClassName(&#x27;pullee&#x27;)[0];
+        this.inputRange.min &#x3D; 0;
+        this.inputRange.max &#x3D; this.maxValue;
+
+        this.addEventListeners();
+    }
+
+    // Set value
+    confirmStartHandler() {
+        window.cancelAnimationFrame(this.rafID);
+        this.currValue &#x3D; this.inputRange.value;
+    }
+
+    // Check if completed
+    confirmEndHandler() {
+        this.currValue &#x3D; this.inputRange.value;
+
+        if(this.currValue &gt;&#x3D; this.maxValue) {
+            this.agreeHandler();
+        }
+        else if(this.currValue &lt;&#x3D; 0) {
+            this.disagreeHandler();
+        }
+        else {
+            if(this.currValue &gt; 50) {
+                this.rafID &#x3D; window.requestAnimationFrame(() &#x3D;&gt; {
+                    this.animateHandlerMinus();
+                });
+            }
+            else if(this.currValue &lt; 50) {         
+                this.rafID &#x3D; window.requestAnimationFrame(() &#x3D;&gt; {
+                    this.animateHandlerPlus();
+                });
+            }
+            else {
+                return;
+            }
+        }
+    }
+
+    // Handle Animations
+    animateHandlerMinus() {
+        this.inputRange.value &#x3D; this.currValue;
+        if(this.currValue &gt; 50) {
+            window.requestAnimationFrame(() &#x3D;&gt; {
+                this.animateHandlerMinus();
+            });
+        }
+        this.currValue &#x3D; Number(this.currValue) - this.speed;
+    }
+    animateHandlerPlus() {
+        this.inputRange.value &#x3D; this.currValue;
+        if(this.currValue &lt; 50) {
+            window.requestAnimationFrame(() &#x3D;&gt; {
+                this.animateHandlerPlus();
+        });
+        }
+        this.currValue &#x3D; Number(this.currValue) + this.speed;
+    }
+    disagreeHandler() {
+        this.list.forEach((item) &#x3D;&gt; {
+            if(item.selected)  {
+                item.status &#x3D; &quot;denied&quot;;
+            }
+        })        
+        
+        // Reset User Input
+        setTimeout(() &#x3D;&gt; {
+            this.inputRange.value &#x3D; 50;
+        }, 500);
+        
+        this.findCurrentItem();
+    }
+    agreeHandler() {
+        this.list.forEach((item) &#x3D;&gt; {
+            if(item.selected)  {
+                item.status &#x3D; &quot;approved&quot;;
+            }
+        })
+        // alert(&quot;Agree!&quot;);
+
+        // Reset User Input
+        setTimeout(() &#x3D;&gt; {
+            this.inputRange.value &#x3D; 50;
+        }, 500);
+
+        this.findCurrentItem();
+    }
+
+    addEventListeners() {
+        // Add All Start Drag Listeners
+        this.inputRange.addEventListener(&quot;mousedown&quot;, () &#x3D;&gt; {
+            this.confirmStartHandler();
+        });
+        this.inputRange.addEventListener(&quot;mousestart&quot;, () &#x3D;&gt; {
+            this.confirmStartHandler();
+        });
+        this.inputRange.addEventListener(&quot;touchstart&quot;, () &#x3D;&gt; {
+            this.confirmStartHandler();
+        });
+        // Add All End Drag Listeners
+        this.inputRange.addEventListener(&quot;mouseup&quot;, () &#x3D;&gt; {
+            this.confirmEndHandler();
+        });
+        this.inputRange.addEventListener(&quot;touchend&quot;, () &#x3D;&gt; {
+            this.confirmEndHandler();
+        });
+    }
+
+    navigatetoStatus() {
+        this.router.navigateByUrl(&#x27;/home/status&#x27;);
+    }
+
+    // Pagination
+    nextItem(id) {
+        let nextId &#x3D; id + 1;
+        this.list[id].selected &#x3D; false;
+        this.list[nextId].selected &#x3D; true;
+    }
+
+    findCurrentItem() {
+        this.list.forEach((item) &#x3D;&gt; {
+            if(item.selected) {
+                // First item
+                if(item.id &#x3D;&#x3D; 0) {
+                    setTimeout(() &#x3D;&gt; {
+                        this.nextItem(item.id);
+                    }, 800)
+                } 
+                // Last item
+                if(item.id &#x3D;&#x3D; this.list.length - 1) {
+                    this.isCompleted &#x3D; true;
+                    setTimeout(() &#x3D;&gt; {
+                        this.navigatetoStatus();
+                    }, 2500)
+                }
+            }
+        });
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Someone thinks the room is&lt;/h1&gt;
+&lt;div class&#x3D;&quot;voting&quot;&gt;
+    &lt;ul class&#x3D;&quot;feeling-list&quot;&gt;
+        &lt;li *ngFor&#x3D;&quot;let item of list&quot; [ngClass]&#x3D;&quot;{&#x27;selected&#x27;: item.selected }&quot;&gt;
+            &lt;div class&#x3D;&quot;item-wrapper&quot; class&#x3D;&quot;{{ item.status }}&quot;&gt;
+                &lt;mat-icon aria-hidden&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Test&quot;&gt;{{ item.icon }}&lt;/mat-icon&gt;
+                {{ item.name }}
+                &lt;span class&#x3D;&quot;item-status&quot; *ngIf&#x3D;&#x27;item.status&#x27;&gt;
+                &lt;mat-icon *ngIf&#x3D;&quot;item.status&#x3D;&#x3D;&#x27;approved&#x27;&quot;&gt;done&lt;/mat-icon&gt;
+                &lt;mat-icon *ngIf&#x3D;&quot;item.status&#x3D;&#x3D;&#x27;denied&#x27;&quot;&gt;close&lt;/mat-icon&gt;
+            &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class&#x3D;&quot;pagination&quot;&gt;
+        &lt;li *ngFor&#x3D;&quot;let item of list&quot; [ngClass]&#x3D;&quot;{&#x27;active&#x27;: item.selected }&quot;&gt;{{ item.id }}&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;confirm-selection&quot;&gt;
+    &lt;input type&#x3D;&quot;range&quot; value&#x3D;&quot;50&quot; class&#x3D;&quot;pullee&quot; /&gt;
+    &lt;div class&#x3D;&quot;disagree&quot;&gt;&lt;span&gt;Disagree&lt;/span&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;agree&quot;&gt;&lt;span&gt;Agree&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;status&quot; [ngClass]&#x3D;&quot;{&#x27;active&#x27;: isCompleted }&quot;&gt;
+    Redirecting you to status page
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>voting.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+    width: 100%;
+    color: #0675e8;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #021b78;
+    font-size: 22px;
+    margin-bottom: 10rem;
+}
+
+ul.feeling-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    position: relative;
+    height: 80px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+ul.feeling-list li {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+}
+
+ul.feeling-list li {
+    right: -500px;
+    left: auto;
+}
+
+ul.feeling-list li.selected {
+    right: 0;
+    left: 50%;
+}
+
+ul.feeling-list li div {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #7cb7f1;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 1.5rem;
+    transform: scale(1.4);
+    text-align: center;
+    width: 40%;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    display: none;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    transition: 0.3s ease-in-out;
+    display: grid;
+}
+
+ul.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+ul.pagination li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #FFF;
+    border: 1px solid #0675e8;
+    text-indent: -9999px;
+    transition: 0.3s ease-in-out;
+}
+
+ul.pagination li.active {
+    background-color: #0675e8;
+    border-color: transparent;
+}
+
+ul.pagination li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+ul.feeling-list li div.item-wrapper.approved {
+    background-color: #cce6cb;
+    color: #008001;
+    transition: 0.3s ease-in-out;
+}
+
+ul.feeling-list li div.item-wrapper.denied {
+    background-color: #fecbd0;
+    color: #f90014;
+}
+
+.item-remove {
+    height: 18px;
+    width: 18px;
+    background-color: #021b78;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-remove .mat-icon {
+    font-size: 14px;
+}
+
+mat-icon {
+    display: inline-block;
+    font-size: 20px;
+    height: auto;
+    justify-self: start;
+    display: flex;
+}
+
+
+/* Slide to Confirm */
+
+.confirm-selection {
+    position: relative;
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.confirm-selection input {
+    position: relative;
+    z-index: 3;
+}
+
+.disagree,
+.agree {
+    position: absolute;
+    width: 46%;
+    top: 2px;
+    transform: translate(0, 0%);
+    font-size: 20px;
+    pointer-events: none;
+    height: calc(100% - 7px);
+    display: flex;
+    align-items: center;
+}
+
+.disagree span,
+.agree span {
+    margin-top: -2px;
+    display: block;
+}
+
+.disagree {
+    left: 2px;
+    right: auto;
+    text-align: left;
+    padding-left: 15px;
+    color: #f90014;
+    background-color: #d5b8a8;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.agree {
+    right: -2px;
+    left: auto;
+    text-align: right;
+    padding-right: 15px;
+    justify-content: flex-end;
+    align-items: right;
+    background-color: #cce6cb;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: #008102;
+}
+
+.pullee {
+    width: 100%;
+    appearance: none;
+    transform: scale(1);
+    background-color: transparent;
+}
+
+.pullee:active::-webkit-slider-thumb {
+    appearance: none;
+    transform: scale(1.1);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:active::-moz-range-thumb {
+    border: 0;
+    transform: scale(1.1);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:active::-ms-thumb {
+    transform: scale(1.3);
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.pullee:focus {
+    outline: none;
+}
+
+.pullee::-webkit-slider-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #FFF;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    box-shadow: 0px 0px 14px #000;
+}
+
+.pullee::-moz-range-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.pullee::-ms-thumb {
+    appearance: none;
+    display: block;
+    width: 4.2rem;
+    height: 4rem;
+    border-radius: 40%;
+    background: #021b78;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform ease-out 100ms;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.pullee::-webkit-slider-runnable-track {
+    height: 100%;
+    padding: 0rem;
+    box-sizing: content-box;
+    border-radius: 2rem;
+    background-color: transparent;
+}
+
+.pullee::-moz-range-track {
+    height: 1.3rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
+.pullee::-moz-focus-outer {
+    border: 0;
+}
+
+.pullee::-ms-track {
+    border: 0;
+    height: 1.3rem;
+    padding: 0rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: #7cb7f1;
+    color: transparent;
+}
+
+.pullee::-ms-fill-lower,
+.pullee::-ms-fill-upper {
+    background-color: transparent;
+}
+
+.pullee::-ms-tooltip {
+    display: none;
+}
+
+.status {
+    text-align: center;
+    margin-top: 2rem;
+    color: #021b78;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.status.active {
+    opacity: 1;
+}
+
+.status:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 5000ms infinite;
+    animation: ellipsis steps(4, end) 5000ms infinite;
+    content: &quot;\2026&quot;;
+    /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1>Someone thinks the room is</h1><div class="voting">    <ul class="feeling-list">        <li *ngFor="let item of list" [ngClass]="{\'selected\': item.selected }">            <div class="item-wrapper" class="{{ item.status }}">                <mat-icon aria-hidden="false" aria-label="Test">{{ item.icon }}</mat-icon>                {{ item.name }}                <span class="item-status" *ngIf=\'item.status\'>                <mat-icon *ngIf="item.status==\'approved\'">done</mat-icon>                <mat-icon *ngIf="item.status==\'denied\'">close</mat-icon>            </span>            </div>        </li>    </ul>    <ul class="pagination">        <li *ngFor="let item of list" [ngClass]="{\'active\': item.selected }">{{ item.id }}</li>    </ul></div><div class="confirm-selection">    <input type="range" value="50" class="pullee" />    <div class="disagree"><span>Disagree</span></div>    <div class="agree"><span>Agree</span></div></div><div class="status" [ngClass]="{\'active\': isCompleted }">    Redirecting you to status page</div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfirmationComponent', 'selector': 'view-confirmation'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'GameDashboardComponent', 'selector': 'app-game-dashboard'},{'name': 'GameSliderComponent', 'selector': 'game-slider'},{'name': 'GameStartComponent', 'selector': 'app-game-start'},{'name': 'GoBackComponent', 'selector': 'goback'},{'name': 'HumidityComponent', 'selector': 'view-humidity'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'ResultComponent', 'selector': 'view-result'},{'name': 'RoomFeelingsComponent', 'selector': 'view-room-feelings'},{'name': 'StatusComponent', 'selector': 'view-status'},{'name': 'TemperatureComponent', 'selector': 'view-temperature'},{'name': 'VentComponent', 'selector': 'vent'},{'name': 'VotingComponent', 'selector': 'view-voting'},{'name': 'ZoneGridComponent', 'selector': 'zone-grid'},{'name': 'ZoneViewComponent', 'selector': 'zoneView'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'VotingComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'VotingComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
