@@ -32,6 +32,7 @@ export class GameDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   CheckAnswer(){

@@ -42,13 +42,22 @@ h1 {
 .questions li {
     background-color: rgba(255, 255, 255, 0.15);
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
     border-radius: 14px;
-    font-size: 18px;
+    font-size: 17px;
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
     cursor: pointer;
+}
+
+.questions li mat-icon {
+    font-size: 30px;
+}
+
+.questions li.selected {
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 mat-icon {
@@ -59,6 +68,11 @@ mat-icon {
     height: auto;
     margin-bottom: 10px;
     font-size: 2em;
+}
+
+.confirmation-wrapper {
+    width: 100%;
+    text-align: center;
 }
 
 .confirmation {
@@ -78,7 +92,7 @@ mat-icon {
     margin: auto;
 }
 
-.game{
+.game {
     position: fixed;
     bottom: 0;
     right: 0;

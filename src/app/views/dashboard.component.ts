@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   page;
   url;
   userId = 1;
+  zone = "";
 
   constructor(private _router: Router){}
 
@@ -19,6 +20,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this._router.events.subscribe((e) => {
       this.setSpecial(e); 
     });
+
+    if(sessionStorage.getItem("zone")) this.zone = sessionStorage.getItem("zone");
   }
 
   ngAfterViewInit(): void{
