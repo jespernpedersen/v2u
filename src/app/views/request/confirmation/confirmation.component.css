@@ -1,6 +1,13 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}
+
 div.content {
-    padding-top: 8rem;
     position: relative;
+    width: 100%;
 }
 
 :host {

@@ -1,5 +1,5 @@
 .room {
-    padding-top: 8rem;
+    padding-top: 15vh;
     height: 100vh;
 }
 
@@ -16,7 +16,7 @@ h1 {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 15px;
-    max-width: 260px;
+    max-width: 280px;
     margin: auto;
 }
 
@@ -40,13 +40,14 @@ h1 {
 .questions li {
     background-color: rgba(255, 255, 255, 0.15);
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 15px;
     border-radius: 14px;
-    font-size: 14px;
+    font-size: 17px;
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
     cursor: pointer;
+    min-height: 140px;
 }
 
 .questions li mat-icon {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { element } from 'protractor';
   
   @Component({
     selector: 'view-room-feelings',
@@ -31,14 +30,14 @@ import { element } from 'protractor';
       {
         id: 2,
         icon: "toys",
-        name: "Need fresh air", 
+        name: "Needs fresh air", 
         routing: "/home/confirmation",
         added: false
       },
       {
         id: 3,
         icon: "whatshot",
-        name: "Too sweaty", 
+        name: "Makes me too sweaty", 
         routing: "/home/confirmation",
         added: false
       },
