@@ -75,7 +75,14 @@ button{
     right: 0;
     top: 15px;
     margin-top: 0;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
  }
+
+.level mat-icon{
+    margin-left: 5px;
+}
 
  .blue{
     color: rgb(5, 117, 230);

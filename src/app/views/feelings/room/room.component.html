@@ -8,9 +8,9 @@
             </div>
         </li>
     </ul>
-    <div class="confirmation-wrapper" *ngIf="selectedItems.length > 0">
-        <div class="confirmation" (click)="confirmSelection()">
-            I am satisfied with my choices
+    <div class="cancelButton">
+        <div class="confirmation" *ngIf="selectedItems.length > 0"  (click)="confirmSelection()">
+            Confirm choices
         </div>
     </div>
 </div>

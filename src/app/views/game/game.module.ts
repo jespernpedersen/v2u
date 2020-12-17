@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { GameSliderModule } from 'src/app/shared/_components/game-slider/game-slider.module';
+import { GoBackModule } from 'src/app/shared/_components/GoBack/goback.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GameSliderModule } from 'src/app/shared/_components/game-slider/game-sl
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    GameSliderModule
+    GameSliderModule,
+    GoBackModule
   ],
   providers: [],
   exports: [

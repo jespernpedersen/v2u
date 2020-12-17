@@ -37,7 +37,7 @@ import { Router } from '@angular/router';
       {
         id: 3,
         icon: "whatshot",
-        name: "Makes me too sweaty", 
+        name: "Makes me sweaty", 
         routing: "/home/confirmation",
         added: false
       },

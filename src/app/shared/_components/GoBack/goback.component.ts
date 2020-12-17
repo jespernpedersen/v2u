@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
   
 @Component({
     selector: 'goback',
@@ -8,9 +9,18 @@ import { Location } from '@angular/common';
 })
 
 export class GoBackComponent {
-    constructor(private _location: Location) {}
+
+    @Input() location = undefined;
+    @Input() text = undefined;
+
+    constructor(private _location: Location, private _router: Router) {}
   
-backClicked() {
-    this._location.back();
+    backClicked() {
+        if(this.location){
+            this._router.navigate([`/${this.location}`]);
+            return;
+        }
+
+        this._location.back();
     }
 }

@@ -34,6 +34,7 @@ export class ZoneGridComponent {
 
       if(this.ventGroups.length == 0 || this.ventGroups[this.ventGroups.length-1].ID != vents[i].vent_group_id) {
         this.ventGroups.push({ID: vents[i].vent_group_id, vents: [], size: 0, grid_style: ""});
+
         if(this.ventGroups.length > 1) {
           this.ventGroups[this.ventGroups.length-2].size =  this.ventGroups[this.ventGroups.length-2].vents.length;
           this.ventGroups[this.ventGroups.length-2].grid_style =  this.GetColumnsCount(this.ventGroups[this.ventGroups.length-2]);
@@ -44,6 +45,7 @@ export class ZoneGridComponent {
     this.ventGroups[this.ventGroups.length-1].size =  this.ventGroups[this.ventGroups.length-1].vents.length;
     this.ventGroups[this.ventGroups.length-1].grid_style =  this.GetColumnsCount(this.ventGroups[this.ventGroups.length-1]);
 
+    this.ventGroups.sort(this.sort);
     this.isLoaded = true;
   }
 
@@ -68,5 +70,15 @@ export class ZoneGridComponent {
     this.onVentUnclaimed.emit(vent);
   }
 
+  private sort(a, b) {
+    if (a.ID < b.ID) {
+      return -1;
+    }
+    if (a > b.ID) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
 
 }

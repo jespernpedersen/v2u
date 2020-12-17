@@ -1,14 +1,14 @@
 <div class="app">
   <header>
     <span class="brand-name" routerLink="/home">Vent2U</span>
-    <h2>Can you fix it?</h2>
-    <button type="button" routerLink="zones" class="level">
-      Level {{level}}
-  </button>
+    <h2>Level {{level}}</h2>
+    <button type="button" routerLink="/home" class="level">
+      Exit <mat-icon>exit_to_app</mat-icon>
+    </button>
   </header>
     <div class="container">
       <mat-card id="gameCard" *ngIf="isInChallenge">
-        <mat-card-title [innerHTML]="tip"></mat-card-title>
+        <mat-card-title id="tip" [innerHTML]="tip"></mat-card-title>
         <game-slider (onValueChanged)="SetAnswer($event)" [unit]="slider.unit" [range]="slider.range" *ngFor="let slider of game[level-1].sliders"></game-slider>
       </mat-card>
 

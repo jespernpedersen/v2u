@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { PATH } from '../services/config';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,6 +12,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   page;
   url;
   userId = 1;
+  zone = "";
 
   constructor(private _router: Router){}
 
@@ -17,6 +20,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this._router.events.subscribe((e) => {
       this.setSpecial(e); 
     });
+
+    if(sessionStorage.getItem("zone")) this.zone = sessionStorage.getItem("zone");
   }
 
   ngAfterViewInit(): void{
@@ -25,7 +30,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   
   public setSpecial(event) {
     if(event instanceof NavigationEnd || event instanceof Router) {
-      if(event.url == this.url) return;
+      if( event.url == this.url ) return;
 
       this.page = document.querySelector(".app");
 

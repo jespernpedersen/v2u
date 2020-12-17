@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './views/dashboard.module';
 import { LoginComponent } from './views/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginService } from './Shared/Services/login.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginService } from './shared/_services/login.service';
+import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'

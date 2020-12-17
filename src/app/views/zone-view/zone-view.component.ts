@@ -29,16 +29,23 @@ export class ZoneViewComponent implements OnInit {
   vents;
   vent;
 
+  canExit = false;
+
   constructor(private _ventsService: VentsService, private _roomsService: RoomsService, private _usersService: UsersService, private _router: Router) { }
 
   @Output() claimEvent = new EventEmitter();
 
   ngOnInit(): void {
 
+    if(!sessionStorage.getItem("zone")) this.canExit = false;
+
     if(this.userId){
       this._usersService.get(1).subscribe(user => {
         this._ventsService.getOne(user[0].vent_id).subscribe(vent => {
+          
           this.currentVent.set(vent[0]);
+          sessionStorage.setItem("zone", `Zone ${vent[0].vent_group_id}`);
+          this.canExit = true;
         });
       });
     }
@@ -62,6 +69,8 @@ export class ZoneViewComponent implements OnInit {
         let user = {ID: this.userId, vent_id: this.vent.ID}
 
         this._usersService.update(user).subscribe( data => {
+          debugger;
+          sessionStorage.setItem("zone", `Zone ${vent.vent_group_id}`);
           this.claimEvent.emit(this.vent);
           this._router.navigate(['/home']);
         });
@@ -71,6 +80,7 @@ export class ZoneViewComponent implements OnInit {
       let user = {ID: this.userId, vent_id: this.vent.ID}
       this._usersService.update(user).subscribe( data => {
           this.claimEvent.emit(this.vent);
+          sessionStorage.setItem("zone", `Zone ${vent.vent_group_id}`);
           this._router.navigate(['/home']);
       });
     }
