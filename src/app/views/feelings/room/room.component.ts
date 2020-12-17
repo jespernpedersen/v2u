@@ -31,7 +31,7 @@ import { element } from 'protractor';
       {
         id: 2,
         icon: "toys",
-        name: "Fresh air", 
+        name: "Need fresh air", 
         routing: "/home/confirmation",
         added: false
       },
@@ -54,13 +54,6 @@ import { element } from 'protractor';
         icon: "waves",
         name: "Too windy", 
         routing: "/home/confirmation",
-        added: false
-      },
-      {
-        id: 6,
-        icon: "invert_colors_off",
-        name: "Humid/Dry", 
-        routing: "/home/humidity",
         added: false
       }
     ];

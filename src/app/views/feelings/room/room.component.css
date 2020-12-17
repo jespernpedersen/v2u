@@ -1,5 +1,5 @@
 .room {
-    padding-top: 60px;
+    padding-top: 8rem;
     height: 100vh;
 }
 
@@ -15,6 +15,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
+    grid-row-gap: 15px;
     max-width: 260px;
     margin: auto;
 }
@@ -41,20 +42,20 @@ h1 {
     text-align: center;
     padding: 20px 10px;
     border-radius: 14px;
-    font-size: 18px;
+    font-size: 14px;
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
     cursor: pointer;
 }
 
+.questions li mat-icon {
+    font-size: 50px;
+}
+
 .questions li.selected {
     opacity: 0.4;
     pointer-events: none;
-}
-
-.questions li:not(:last-of-type) {
-    margin-bottom: 15px;
 }
 
 mat-icon {
